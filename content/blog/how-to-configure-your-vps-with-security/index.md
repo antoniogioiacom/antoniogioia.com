@@ -44,7 +44,7 @@ You can now logout with root account and login with `dev` one.
 SSH configuration with private and public keys
 ----------------------------------------------
 
-A ***password protected login is not safe***, brute force attacks are to be expected on a public server. You can setup up login with SSH keys instead and protect access to your server from unwanted guests. Once the private and public SSH keys are created you keep the private one on your computer and the public one on the server, the protocol will make sure that the access is granted only to the user that can verify the corresponding private key. If you want to know more about SSH I suggest to read my [article about SSH port forwarding](/blog/dynamic-port-forwarding-with-ssh).
+A ***password protected login is not safe***, brute force attacks are to be expected on a public server. You can setup up login with SSH keys instead and protect access to your server from unwanted guests. Once the private and public SSH keys are created you keep the private one on your computer and the public one on the server, the protocol will make sure that the access is granted only to the user that can verify the corresponding private key. If you want to know more about SSH I suggest to read my [article about SSH port forwarding](/dynamic-port-forwarding-with-ssh).
 
 Open a terminal on your computer, move to the `.ssh` folder (`/home/YOURUSER/.ssh` on Linux, (`/Users/YOURUSER/.ssh` on Mac, in `Home` folder on Windows):
 

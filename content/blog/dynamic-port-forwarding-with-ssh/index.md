@@ -225,7 +225,7 @@ If you are more old school and chat over IRC with `irssi` client, type within th
     /set proxy_port 8080
     /set use_proxy ON
 
-Note that 127.0.0.1 is the address of `localhost`. I wrote an article about [IRC, SSL and OTR configurations](https://antoniogioia.com/blog/irc-with-ssl-and-otr-encryption) if you want to know more.
+Note that 127.0.0.1 is the address of `localhost`. I wrote an article about [IRC, SSL and OTR configurations](/irc-with-ssl-and-otr) if you want to know more.
 
 Optional configurations
 -----------------------

@@ -1,0 +1,25 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+.not-found {
+    padding: $base-spacing / 2;
+  }
+  
+  .not-found-number {
+    font-size: rem(60px);
+    color: lighten($theme-grey, 30%);
+  }
+  
+  .not-found-title {
+    font-size: rem(32px);
+    color: $theme-grey;
+  }
+  
+  .not-found-icon {
+    width: rem(300px);
+    height: rem(300px);
+    filter: $filter-icon-hover;
+    margin: $base-spacing auto;
+    display: block;
+  }

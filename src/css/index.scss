@@ -1,0 +1,322 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+.default {
+    width: 100%;
+    height: 92vh;
+    background: $background-section;
+    padding: ($base-spacing * 4) 0;
+    text-align: center;
+    border-bottom: rem(4px) solid $theme-green-dark;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.articles {
+    width: 100%;
+    background: $background-section;
+    @include background-image($background-page, "/images/bg-articles.jpg", center, center);
+    padding: ($base-spacing * 4) 0;
+    text-align: center;
+    border-top: rem(4px) solid $theme-green-dark;
+    border-bottom: rem(4px) solid $theme-green-dark;
+}
+
+.projects {
+    background: $background-section;
+    padding: ($base-spacing * 4) 0;
+    text-align: center;
+    border-bottom: rem(4px) solid $theme-green-dark;
+    overflow: hidden;
+}
+
+.box-container {
+    text-align: center;
+    padding: ($base-spacing * 3) $base-spacing;
+}
+
+.box-container .box {
+    width: rem(340px);
+    position: relative;
+    text-align: center;
+    background: #202020;
+    display: inline-block;
+    @include border-radius(rem(3px));
+    @include box-shadow(0px 3px 20px 0px, $shadow);
+    padding: $base-spacing ($base-spacing * 2);
+    margin: 0 $base-spacing;
+}
+
+.projects .box span {
+    text-align: center;
+    padding: $base-spacing;
+    font-size: rem(18px);
+    color: $theme-grey;
+    display: inline-block;
+    width: 100%;
+}
+
+.projects .box p {
+    padding: ($base-spacing /2) 0 ($base-spacing /2) 0;
+    font-size: rem(18px);
+    color: $theme-grey;
+}
+
+.projects-img {
+    width: rem(140px);
+    height: rem(140px);
+    @include border-radius(rem(30px));
+    display: block;
+    margin: $base-spacing auto $base-spacing auto;
+}
+
+.project-desc {
+    position: absolute;
+    opacity: 0;
+    left: 100%;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s, left 0.5s linear;
+}
+
+.projects .box:hover .project-desc {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $background-header;
+    padding: 0 $base-spacing;
+    visibility: visible;
+    opacity: 1;
+    line-height: rem(24px);
+}
+
+.project-desc-inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-desc-source {
+    position: absolute;
+    bottom: $base-spacing;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.project-desc-source img {
+    width: rem(36px);
+    height: rem(36px);
+    filter: $filter-icon-hover;
+}
+
+.collabs {
+    text-align: center;
+    padding: ($base-spacing * 2) 0 0 0;
+}
+
+.collabs ul {
+    text-align: center;
+    height: rem(100px);
+}
+
+.collabs ul li {
+    display: inline-block;
+    padding: 0 ($base-spacing * 2);
+    position: relative;
+    vertical-align: middle;
+}
+
+.contacts-why {
+    padding: $base-spacing 0 ($base-spacing * 2) 0;
+    width: rem(750px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.contacts-why li {
+    text-align: left;
+    font-size: rem(18px);
+    padding: rem(24px) 0 rem(24px) rem(34px);
+    color: $link;
+    line-height: rem(24px);
+    font-weight: 700;
+}
+
+.contacts-why li:before {
+    content: '□';
+    color: $theme-green-editor;
+    position: absolute;
+    left: rem(5px);
+}
+
+@media only screen and (min-height: 300px) and (max-height: 740px) {
+
+    .default {
+        height: 100%;
+        min-height: rem(500px);
+        overflow: auto;
+        padding: $base-spacing / 2;
+    }
+
+    .main {
+        height: 100%;
+        min-height: rem(700px);
+        overflow: auto;
+    }
+
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
+
+    .articles,
+    .projects {
+        padding: ($base-spacing * 2) 0;
+        overflow: auto;
+    }
+
+    .box-container {
+        padding: ($base-spacing * 2) ($base-spacing / 4);
+    }
+
+    .box-container .box {
+        width: 27%;
+        padding: $base-spacing / 2;
+        margin: 0 ($base-spacing / 2);
+    }
+
+    .collabs {
+        padding-top: $base-spacing / 2;
+    }
+
+    .collabs ul {
+        height: auto;
+        padding: 0
+    }
+
+    .collabs ul li {
+        width: 27%;
+        padding: $base-spacing 0;
+    }
+
+    .collabs ul li img {
+        width: 100%;
+        max-width: rem(160px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .collabs ul li img.sm {
+        max-width: rem(95px);
+    }
+
+    .contacts-why {
+        margin: 0 $base-spacing;
+        padding: ($base-spacing / 2) 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 660px) {
+
+    .mobile-off {
+        display: none;
+    }
+
+    .mobile-on {
+        display: inline;
+    }
+
+    .main {
+        height: auto;
+        overflow: auto;
+    }
+
+    .articles {
+        height: auto;
+        padding: $base-spacing / 2;
+    }
+
+    .projects {
+        padding: $base-spacing / 2;
+        overflow: auto;
+    }
+
+    .projects h3 {
+        padding: $base-spacing / 3;
+    }
+
+    .box-container {
+        padding: $base-spacing / 2;
+    }
+
+    .box-container .box {
+        width: 100%;
+        padding: $base-spacing;
+        margin: 0 auto $base-spacing auto;
+    }
+
+    .box-container .box:last-of-type {
+        margin: 0 auto;
+    }
+
+    .projects .box span {
+        padding: $base-spacing / 3;
+        font-size: rem(16px);
+    }
+
+    .projects .box p {
+        padding: 0;
+        font-size: rem(16px);
+    }
+    
+    .projects-img {
+        width: rem(120px);
+        height: rem(120px);
+        margin: ($base-spacing / 2) auto;
+    }
+
+    .project-desc-source {
+        display: none;
+    }
+
+    .collabs {
+        padding: ($base-spacing / 2) 0;
+    }
+
+    .collabs ul {
+        height: auto;
+    }
+
+    .collabs ul li {
+        width: 100%;
+        padding: $base-spacing 0;
+    }
+
+    .collabs ul li img {
+        width: 100%;
+        max-width: rem(180px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .collabs ul li img.sm {
+        max-width: rem(95px);
+    }
+
+    .contacts-why {
+        padding: 0;
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,53 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+.articles ul {
+    padding: $base-spacing 0;
+    width: rem(750px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.articles li {
+    text-align: left;
+}
+
+.articles li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: rem(18px);
+    padding: rem(24px) 0 rem(24px) rem(34px);
+    line-height: rem(24px);
+    font-weight: 700;
+}
+
+.articles a:before {
+    content: '□';
+    color: $theme-green-editor;
+    position: absolute;
+    left: rem(5px);
+    @include transition(color, 0.5s, ease-in-out);
+}
+
+.articles a:hover:before {
+    color: $theme-green-editor;
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
+
+    .articles ul {
+        margin: 0 $base-spacing;
+    }
+
+}
+
+@media only screen and (min-width: 240px) and (max-width: 660px) {
+
+    .articles ul {
+        padding: 0;
+        width: 100%;
+    }
+
+}

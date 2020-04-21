@@ -1,0 +1,25 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+.intro {
+    position: relative;
+    padding: ($base-spacing / 2) ($base-spacing / 4);
+    text-align: center;
+}
+
+.intro p {
+    color: lighten($theme-grey, 30%);
+    font-size: rem(16px);
+    line-height: rem(24px);
+    font-weight: 700;
+    padding: 0 ($base-spacing / 2);
+}
+
+.keyword{
+    color: #cc99cd;
+}
+
+.keyword-alt{
+    color: #7ec699;
+}

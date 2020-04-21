@@ -1,0 +1,62 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+header {
+    background: $background-header;
+    width: 100%;
+    height: $header-height;
+    line-height: $header-height;
+    border-bottom: rem(4px) solid $theme-green-dark;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+header h1{
+    height: $header-height;
+    line-height: $header-height;
+    margin:0 $base-spacing;
+    font-size: rem(20px);
+    font-weight: bold;
+}
+
+.toolbar{
+    float: right;
+    margin:0 $base-spacing;
+    height: $header-height;
+    line-height: $header-height;
+}
+
+.toolbar li {
+    display: inline-block;
+    height: $header-height;
+    line-height: $header-height;
+}
+
+@media only screen and (min-width: 441px) and (max-width: 660px) {
+    
+    header h1{
+        margin:0 $base-spacing / 3;
+        font-size: rem(18px);
+    }
+
+    .toolbar{
+        margin:0 $base-spacing / 3;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 440px) {
+
+    header h1{
+        margin:0 ($base-spacing / 3) 0 ($base-spacing / 2);
+        font-size: rem(18px);
+    }
+
+    .toolbar {
+        display: none;
+    }
+    
+}

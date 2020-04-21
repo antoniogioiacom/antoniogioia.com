@@ -1,0 +1,39 @@
+@function rem($px, $base: $theme-font-size) {
+    @return ($px / $base) * 1rem;
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+    -moz-box-sizing: $box-model;
+    -ms-box-sizing: $box-model;
+    box-sizing: $box-model;
+}
+
+@mixin background-image($color, $image, $x, $y) {
+    background: $color;
+    background: url($image) no-repeat $x $y fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin transition($attr, $time, $type) {
+    -webkit-transition: $attr $time $type;
+    -moz-transition: $attr $time $type;
+    -o-transition: $attr $time $type;
+    transition: $attr $time $type;
+}
+
+@mixin border-radius($size) {
+    border-radius: $size;
+    -moz-border-radius: $size;
+    -o-border-radius: $size;
+    -webkit-border-radius: $size;
+}
+
+@mixin box-shadow($size, $color) {
+    -webkit-box-shadow: $size $color;
+    -moz-box-shadow: $size $color;
+    box-shadow: $size $color;
+}

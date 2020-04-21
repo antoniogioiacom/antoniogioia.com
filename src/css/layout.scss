@@ -1,0 +1,8 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./animations.scss";
+@import "./style.scss";
+
+.container {
+  margin-top: $header-height;
+}

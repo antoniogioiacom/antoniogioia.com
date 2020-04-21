@@ -1,0 +1,350 @@
+@import "./colors.scss";
+
+/* # Simple Typography https://github.com/AdamMarsden/simple-typography */
+
+// Font Family
+$font-family: Arial, Helvetica, sans-serif;
+
+// Base Font for HTML
+$base-font-size: 16px;
+$theme-font-size: $base-font-size;
+
+@import "./mixin.scss";
+
+// Paragraph Styles
+$paragraph-color      : #505050;
+$paragraph-size       : rem(16px);
+$paragraph-line-height: 1.6em;
+$paragraph-margin     : 20px;
+
+// Header Styles
+$header-color      : #000000;
+$header-size       : rem(32px);
+$header-line-height: 1.25em;
+$header-margin     : $paragraph-margin * 1.2;
+
+// Blockquote Styles
+$blockquote-color      : #505050;
+$blockquote-size       : rem(23px);
+$blockquote-line-height: 1.5em;
+$blockquote-margin     : $paragraph-margin * 1.5;
+
+// Links
+$link-color: #124813;
+
+// hr
+$hr-margin: 30px;
+
+// Type Misc
+$font-weight-bold: 800;
+$border-color: #DADADA;
+
+// Headers
+.blog h1, 
+.blog h2, 
+.blog h3, 
+.blog h4, 
+.blog h5, 
+.blog h6 {
+    margin-top: $header-margin * 1.5;
+    color: $header-color;
+    line-height: $header-line-height;
+    font-weight: 700;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.blog h1 {
+    font-size: $header-size;
+    margin-bottom: $header-margin;
+}
+
+.blog h2 {
+    font-size: $header-size / 1.3;
+    margin-top: 40px;
+    margin-bottom: $header-margin / 1.3;
+    padding: 0;
+}
+
+.blog h3 {
+    font-size: $header-size / 1.5;
+    margin-bottom: $header-margin / 1.5;
+    border: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.blog h4 {
+    font-size: $header-size / 1.7;
+    margin-bottom: $header-margin / 1.7;
+}
+
+.blog h5 {
+    font-size: $header-size / 1.8;
+    margin-bottom: $header-margin / 1.8;
+}
+
+.blog h6 {
+    font-size: $header-size / 2;
+    margin-bottom: $header-margin / 2;
+}
+
+
+
+// Paragraphs
+.blog p {
+    margin-bottom: $paragraph-margin;
+    font-size: $paragraph-size;
+    line-height: $paragraph-line-height;
+    color: $paragraph-color;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+
+// Links
+.blog a {
+    color: lighten($link-color, 20%);
+    text-decoration: underline;
+    text-decoration-color: $link-color;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: darken($link-color, 30%);
+
+    }
+}
+
+
+// Lists
+.blog ul,
+.blog ol {
+    margin: $paragraph-margin 0 0 20px;
+    padding: 0 0 20px 0;
+
+    li {
+        margin-top: 10px;
+        line-height: $paragraph-line-height;
+        color: $paragraph-color;
+    }
+
+    ul,
+    ol {
+        margin-top: 0;
+    }
+}
+
+.blog ul {
+
+    li {
+        list-style: disc;
+    }
+
+    ul {
+
+        li {
+            list-style: circle;
+        }
+    }
+}
+
+.blog ol {
+
+    li {
+        list-style: decimal;
+    }
+}
+
+
+// hr
+.blog hr {
+    height: 1px;
+    margin: $hr-margin 0;
+    border: none;
+    background-color: $border-color;
+}
+
+
+// Blockquote
+.blog blockquote {
+    margin: $blockquote-margin 0;
+    font-size: $blockquote-size;
+    line-height: $blockquote-line-height;
+    color: $blockquote-color;
+    text-align: center;
+    font-style: italic;
+}
+
+
+// Tables
+.blog table {
+    width: 100%;
+    margin: $blockquote-margin 0;
+    border-collapse: collapse;
+}
+
+.blog table, .blog td, .blog th {
+    border: 1px solid $border-color;
+    text-align: left;
+}
+
+.blog th {
+    font-weight: $font-weight-bold;
+}
+
+.blog th, .blog td {
+    padding: 15px;
+}
+
+
+// Figure
+.blog figure {
+    margin: $blockquote-margin 0;
+
+    img {
+        margin: 0;
+    }
+}
+
+.blog figcaption {
+    margin-top: 10px;
+    color: lighten($paragraph-color, 10%);
+    font-size: $paragraph-margin * 0.8;
+}
+
+
+// Code
+.blog pre {
+    display: block;
+    margin: 0 0 40px 0;
+    padding: 20px;
+    background-color: lighten($border-color, 12%);
+    border: 1px solid $border-color;
+    overflow: auto;
+    border-radius: 3px;
+
+    code {
+        position: static;
+        padding: 0;
+        border: none;
+        line-height: 1.5em;
+    }
+}
+
+.blog code {
+    position: relative;
+    top: -0.2em;
+    padding: 3px;
+    font-family: Courier New, Courier, monospace;
+    font-size: $paragraph-size / 1.2;
+    color: darken($border-color, 70%);
+    line-height: 1em;
+    pointer-events: none;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+}
+
+
+
+// Misc Styles
+.blog em,
+.blog i,
+.blog .italic {
+    font-style: italic;
+}
+
+.blog strong,
+.blog b,
+.blog .bold {
+    font-weight: $font-weight-bold;
+}
+
+.blog {
+    width: 100%;
+    background: #181818;
+    padding: rem(60px) rem(90px);
+    border-bottom: rem(4px) solid $theme-green-dark;
+}
+
+.blog-post-container {
+    width: 92%;
+    margin: 0 auto;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 30px 90px;
+    background: #eee;
+}
+
+.blog-post-container img {
+    display: block;
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+    margin: $blockquote-margin auto;
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
+
+    .blog h1 {
+        font-size: $header-size / 1.4;
+    }
+    
+    .blog h2 {
+        font-size: $header-size / 1.5;
+        white-space: normal;
+    }
+    
+    .blog h3 {
+        text-align: left;
+        font-size: $header-size / 1.6;
+    }
+    
+    .blog h4 {
+        font-size: $header-size / 1.65;
+    }
+
+    .blog {
+        padding: rem(20px);
+    }
+
+    .blog-post-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 240px) and (max-width: 660px) {
+
+    .blog h1 {
+        font-size: $header-size / 1.5;
+    }
+    
+    .blog h2 {
+        font-size: $header-size / 1.65;
+        white-space: normal;
+    }
+    
+    .blog h3 {
+        text-align: left;
+        font-size: $header-size / 1.7;
+    }
+    
+    .blog h4 {
+        font-size: $header-size / 1.75;
+    }
+
+    .blog {
+        padding: rem(10px) rem(5px);
+    }
+
+    .blog-post-container {
+        width: 100%;
+        padding: 20px;
+    }
+}

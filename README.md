@@ -7,7 +7,7 @@ Made with GatsbyJs / React, Sass and GraphQL
 
 Lecce, 2020
 
-To Do
+todo
 -----
 
 * English version 

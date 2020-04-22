@@ -3,6 +3,7 @@ import Head from "../components/head"
 import Layout from "../components/layout"
 import Window from "../components/window"
 import Footer from "../components/footer"
+import BlogArticles from "../components/blog-articles"
 import MainMobile from "../components/main-mobile"
 import "../css/index.scss"
 
@@ -31,13 +32,7 @@ export default () => {
         </div>
       </section>
       <section className="articles" aria-label="Blog">
-        <ul>
-            <li><a className="external" href="/how-to-configure-your-vps-with-security" title="Blog: How to configure your VPS with security in mind">how to configure your VPS with security in mind</a></li>
-            <li><a className="external" href="/dynamic-port-forwarding-with-ssh" title="Blog: Dynamic port forwarding with SSH and SOCKS5">dynamic port forwarding with SSH and SOCKS5</a></li>
-            <li><a className="external" href="/irc-with-ssl-and-otr" title="Blog: IRC with SSL and OTR encryption">IRC with SSL and OTR encryption</a></li>
-            <li><a className="external" href="/how-html5-apis-can-fingerprint-users" title="Blog: How HTML5 APIs can fingerprint users">how HTML5 APIs can fingerprint users</a></li>
-            <li><a className="external" href="/how-to-use-microdata-person" title="Blog: How to use microdata Person on your portfolio website and improve your SEO">how to use microdata Person on your portfolio website and improve your seo</a></li>
-        </ul>
+        <BlogArticles />
       </section>
       <section className="projects" aria-label="Progetti e collaborazioni">
           <h2 aria-level="2">progetti<span className="mobile-off"> personali</span><span className="square">|</span></h2>
@@ -91,9 +86,9 @@ export default () => {
           <h2 aria-level="2">collaborazioni<span className="square">|</span></h2>
           <div className="collabs">
               <ul>
-                  <li><img src="/images/apuliastudentservice.png" alt="Apulia Student Service logo" className="sm" /></li>
-                  <li><img src="/images/cercoalloggio.png" alt="Cercoalloggio.com logo" /></li>
-                  <li><img src="/images/spassiaisi.png" alt="Spassiaisi logo" className="sm" /></li>
+                  <li><a href="http://apuliastudentservice.com" title="Apulia Student Service (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/apuliastudentservice.png" alt="Apulia Student Service logo" className="sm" /></a></li>
+                  <li><a href="https://www.cercoalloggio.com" title="Cercoalloggio.com (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/cercoalloggio.png" alt="Cercoalloggio.com logo" /></a></li>
+                  <li><a href="http://spassiaisi.photo" title="Spassiaisi Photo Studio (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/spassiaisi.png" alt="Spassiaisi logo" className="sm" /></a></li>
               </ul>
           </div>
       </section>

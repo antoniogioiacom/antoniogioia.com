@@ -76,7 +76,7 @@ export default () => {
               />
             </li>
         </ul>
-        <div>
+        <div itemscope itemtype="http://schema.org/Person">
           <small>
             <span itemprop="name">Antonio Gioia </span><br class="mobile-on" />
             <span className="square-footer">□</span><span itemprop="jobTitle"> Web developer </span><br class="mobile-on" />

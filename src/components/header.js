@@ -30,7 +30,7 @@ export default () => {
     <header>
         <h1 aria-level="1">
             <span className="square">&#9632;</span>
-            <a href="/" itemprop="url" title={data.site.siteMetadata.details.logoLinkTitle}>{data.site.siteMetadata.details.domain}</a>
+            <a href="/" title={data.site.siteMetadata.details.logoLinkTitle}>{data.site.siteMetadata.details.domain}</a>
         </h1>
         <div className="toolbar" aria-label="Contatti">
             <ul>

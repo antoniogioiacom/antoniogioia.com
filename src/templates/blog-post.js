@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Footer from "../components/footer"
 import "../css/blog.scss"
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
 
   return (

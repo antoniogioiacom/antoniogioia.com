@@ -4,7 +4,7 @@ import "../css/layout.scss"
 
 export default ({children}) => {
   return (
-    <div itemscope itemtype="http://schema.org/Person">
+    <div>
       <Header />
       <div className="container">
         {children}

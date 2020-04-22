@@ -11,7 +11,6 @@ export default () => {
           siteMetadata{
             details {
               domain
-              baseUrl
               logoLinkTitle
             }
             contacts {

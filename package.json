@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.20.28",
+    "gatsby-plugin-advanced-sitemap": "^1.5.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
     "gatsby-plugin-sass": "^2.2.3",
     "gatsby-source-filesystem": "^2.2.4",

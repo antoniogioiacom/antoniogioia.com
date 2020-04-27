@@ -1,0 +1,43 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+.contacts-why {
+    padding: $base-spacing 0 ($base-spacing * 2) 0;
+    width: rem(750px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.contacts-why li {
+    text-align: left;
+    font-size: rem(18px);
+    padding: rem(24px) 0 rem(24px) rem(34px);
+    color: $link;
+    line-height: rem(24px);
+    font-weight: 700;
+}
+
+.contacts-why li:before {
+    content: '□';
+    color: $theme-green-editor;
+    position: absolute;
+    left: rem(5px);
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
+
+    .contacts-why {
+        margin: 0 $base-spacing;
+        padding: ($base-spacing / 2) 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 660px) {
+
+    .contacts-why {
+        padding: 0;
+        width: 100%;
+    }
+}

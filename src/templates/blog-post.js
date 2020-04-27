@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-    <Head prefix={`Blog <> ${post.frontmatter.title} <> `} />
+    <Head prefix={`Blog <> ${post.frontmatter.title} <> Web apps developer <> `} />
       <div className="blog" role="main">
         <div className="blog-post-container">
           <div className="blog-post">

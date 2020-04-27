@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Window from "../components/window"
 import Footer from "../components/footer"
 import BlogArticles from "../components/blog-articles"
+import ContactsWhy from "../components/contacts-why"
 import MainMobile from "../components/main-mobile"
 import "../css/index.scss"
 
@@ -11,7 +12,7 @@ export default () => {
 
   return (
     <Layout>
-      <Head prefix="" />
+      <Head prefix="Full stack Javascript developer <> " />
       <section className="main" role="main" aria-label="Informazioni personali">
         <Window 
           classes="editor code-editor code-editor-skills mobile-off" 
@@ -93,16 +94,7 @@ export default () => {
           </div>
       </section>
       <section className="footer" aria-label="Contatti">
-        <h2 aria-level="2">cosa posso fare<span className="mobile-off"> per te</span><span className="square">|</span></h2>
-        <ul className="contacts-why">
-            <li>progettazione e realizzazione di rich web applications</li>
-            <li>piattaforme web con soluzioni personalizzate</li>
-            <li>creazione e/o aggiornamento di siti web e landing pages</li>
-            <li>siti aziendali con installazione wordpress, temi personalizzati e configurazione plugin</li>
-            <li>programmazione di crawlers con aggregazione e analisi di dati per strategie di marketing</li>
-            <li>consulenza tecnica servizi informatici</li>
-            <li>consulenza sicurezza informatica e protezione dati</li>
-        </ul>
+        <ContactsWhy />
         <Footer />
       </section>
     </Layout>

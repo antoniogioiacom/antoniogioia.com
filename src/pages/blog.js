@@ -8,7 +8,7 @@ export default () => {
   
     return (
       <Layout>
-       <Head prefix="Blog <> " />
+       <Head prefix="Blog <> Web developer Full stack <> " />
         <section className="articles" role="main" aria-label="Blog">
           <BlogArticles />
         </section>

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.antoniogioia.com`,
     author: "Antonio Gioia",
-    title: "Full stack Javascript developer - Antonio Gioia, Lecce, Italy",
+    title: "Antonio Gioia, Lecce, Italy",
     description: "Antonio Gioia programmatore web full stack, lavora come libero professionista in Lecce, Italia",
     details: {
       domain: "antoniogioia.com",

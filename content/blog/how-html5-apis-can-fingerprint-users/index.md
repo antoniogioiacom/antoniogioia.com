@@ -2,6 +2,8 @@
 title: How HTML5 APIs can fingerprint users
 date: "2015-11-12T17:00:00.284Z"
 description: "How HTML5 APIs can fingerprint users"
+filepath: "/how-html5-apis-can-fingerprint-users"
+cover: "/images/blog/cover-html.jpg"
 ---
 
 How HTML5 APIs can fingerprint users

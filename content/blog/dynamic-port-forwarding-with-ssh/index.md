@@ -2,6 +2,8 @@
 title: Dynamic port forwarding with SSH and SOCKS5
 date: "2015-11-01T17:00:00.284Z"
 description: "Dynamic port forwarding with SSH and SOCKS5"
+filepath: "/dynamic-port-forwarding-with-ssh"
+cover: "/images/blog/cover-ssh.jpg"
 ---
 
 Dynamic port forwarding with SSH and SOCKS5

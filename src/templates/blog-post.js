@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Head from "../components/head"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Footer from "../components/footer"
 import "../css/blog.scss"
@@ -10,7 +10,20 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-    <Head prefix={`Blog <> ${post.frontmatter.title} <> Web apps developer <> `} />
+      <Helmet 
+          title={`Blog <> ${post.frontmatter.title} <> ${data.site.siteMetadata.author}`} 
+      >
+      <html lang="it-IT" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"/>
+      <meta name="description" content={data.site.siteMetadata.description} />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content={data.site.siteMetadata.author} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="{post.frontmatter.title}" />
+      <meta property="og:url" content={`${data.site.siteUrl}${post.frontmatter.filepath}`} />
+      <meta property="og:image" content={`${data.site.siteUrl}${post.frontmatter.cover}`} />
+      <meta property="article:author" content={data.site.siteMetadata.author} />
+      </Helmet>
       <div className="blog" role="main">
         <div className="blog-post-container">
           <div className="blog-post">
@@ -40,6 +53,15 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        filepath
+        cover
+      }
+    }
+    site {
+      siteMetadata{
+          title
+          description
+          author
       }
     }
   }

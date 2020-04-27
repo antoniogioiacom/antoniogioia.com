@@ -2,6 +2,8 @@
 title: IRC with SSL and OTR encryption
 date: "2015-12-14T17:00:00.284Z"
 description: "IRC with SSL and OTR encryption"
+filepath: "/irc-with-ssl-and-otr"
+cover: "/images/blog/cover-encryption.jpg"
 ---
 
 IRC with SSL and OTR encryption

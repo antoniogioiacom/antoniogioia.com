@@ -22,7 +22,9 @@ export default () => {
     <header>
         <h1 aria-level="1">
             <span className="square">&#9632;</span>
-            <a href="/" title={data.site.siteMetadata.details.logoLinkTitle}>{data.site.siteMetadata.details.domain}</a>
+            <Link to="/" title={data.site.siteMetadata.details.logoLinkTitle}>
+              {data.site.siteMetadata.details.domain}
+            </Link>
         </h1>
         <div className="toolbar" aria-label="Contatti">
           <Link className="header-button" title="Domande? Proposte? Contattami!" to="/contacts">

@@ -285,7 +285,3 @@ Notes
 Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article contact me at [info@antoniogioia.com](info@antoniogioia.com).
 
 Cover picture by [Francesco Ungaro](https://www.pexels.com/it-it/@francesco-ungaro)
-
-***
-
-⇠ [Blog](/blog)

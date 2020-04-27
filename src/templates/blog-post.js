@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Head from "../components/head"
 import Layout from "../components/layout"
 import Footer from "../components/footer"
@@ -15,6 +15,8 @@ const BlogPostTemplate = ({ data }) => {
         <div className="blog-post-container">
           <div className="blog-post">
             <article className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <hr />
+            ⇠ <Link to="/blog" title="Lista articoli">Blog</Link>
           </div>
         </div>
       </div>

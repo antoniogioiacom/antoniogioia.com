@@ -19,9 +19,9 @@ const BlogPostTemplate = ({ data }) => {
       <meta name="robots" content="index, follow" />
       <meta name="author" content={data.site.siteMetadata.author} />
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="{post.frontmatter.title}" />
-      <meta property="og:url" content={`${data.site.siteUrl}${post.frontmatter.filepath}`} />
-      <meta property="og:image" content={`${data.site.siteUrl}${post.frontmatter.cover}`} />
+      <meta property="og:title" content={post.frontmatter.title} />
+      <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}${post.frontmatter.filepath}`} />
+      <meta property="og:image" content={`${data.site.siteMetadata.siteUrl}${post.frontmatter.cover}`} />
       <meta property="article:author" content={data.site.siteMetadata.author} />
       </Helmet>
       <div className="blog" role="main">

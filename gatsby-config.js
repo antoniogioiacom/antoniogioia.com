@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: `https://www.antoniogioia.com`,
     author: "Antonio Gioia",
     title: "Antonio Gioia, Lecce, Italy",
-    description: "Antonio Gioia programmatore web full stack, lavora come libero professionista in Lecce, Italia",
+    description: "Antonio Gioia programmatore web full stack, lavora come libero professionista a Lecce, Italia",
     details: {
       domain: "antoniogioia.com",
       logoLinkTitle: "Antonio Gioia - full stack web developer"

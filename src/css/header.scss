@@ -36,6 +36,29 @@ header h1{
     line-height: $header-height;
 }
 
+.header-button {
+    display: inline-block;
+    padding: 0 $base-spacing / 2;
+    border: 0;
+    height: rem(56px);
+    font-weight: 700;
+    font-size: rem(18px);
+    color: $theme-grey;
+}
+
+.header-button img {
+    width: rem(36px);
+    height: rem(36px);
+    filter: $filter-icon;
+    position: relative;
+    top: rem(10px);
+    @include transition(filter, 0.5s, ease-in-out);
+}
+
+.header-button:hover img {
+    filter: $filter-icon-hover;
+}
+
 @media only screen and (min-width: 441px) and (max-width: 660px) {
     
     header h1{
@@ -48,15 +71,28 @@ header h1{
     }
 }
 
-@media only screen and (min-width: 240px) and (max-width: 440px) {
-
+@media only screen and (min-width: 240px) and (max-width: 299px) {
+    
     header h1{
-        margin:0 ($base-spacing / 3) 0 ($base-spacing / 2);
+        margin:0 $base-spacing / 4;
         font-size: rem(18px);
     }
 
-    .toolbar {
+    .toolbar{
         display: none;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 440px) {
+
+    header h1{
+        margin:0 ($base-spacing / 2) 0 ($base-spacing / 2);
+        font-size: rem(18px);
+    }
+
+    .toolbar{
+        margin:0;
     }
     
 }

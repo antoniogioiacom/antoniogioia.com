@@ -1,0 +1,127 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+@import "./style.scss";
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto; 
+    vertical-align: top; 
+    resize: vertical;
+}
+
+.form {
+    padding: ($base-spacing) $base-spacing ($base-spacing * 2) $base-spacing;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    border: 0;
+    padding: ($base-spacing / 2) ($base-spacing / 2) ($base-spacing / 2) ($base-spacing * 4.4);
+    background: lighten($background-page, 5%);
+    color: lighten($link, 5%);
+    @include border-radius(rem(3px));
+    font-weight: 700;
+}
+
+.form button {
+    display: block;
+    padding: $base-spacing / 2;
+    background: lighten($theme-green-dark, 10%);
+    color: $link;
+    border: 0;
+    width: rem(220px);
+    margin: 0 auto;
+    @include border-radius(rem(3px));
+}
+
+.form button:hover {
+    background: $theme-green-dark;
+}
+
+.form-row {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: $base-spacing / 2;
+    text-align: left;
+}
+
+.label {
+    position: absolute;
+    top: rem(4px);
+    left: 0;
+    width: rem(120px);
+    margin: $base-spacing / 2;
+    font-weight: 700;
+    color: $theme-green-light;
+    padding: $base-spacing / 2;
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
+    .form-row {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 660px) {
+    .form {
+        padding: 0;
+    }
+    .form input,
+    .form textarea {
+        padding: $base-spacing / 4;
+    }
+    .label {
+        top: -8px;
+        position: relative;
+        margin: 0;
+    }
+    .form-row {
+        width: 100%;
+    }
+    .form button {
+        width: 100%;
+        padding: $base-spacing / 4;
+    }
+}

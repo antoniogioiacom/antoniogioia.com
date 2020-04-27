@@ -2,8 +2,9 @@ import React from "react"
 import { navigate } from 'gatsby-link'
 import Head from "../components/head"
 import Layout from "../components/layout"
-import ContactsWhy from "../components/contacts-why"
 import Footer from "../components/footer"
+import ContactsWhy from "../components/contacts-why"
+import "../css/form.scss"
 
 
 
@@ -39,8 +40,7 @@ function encode(data) {
         <Layout>
            <Head prefix="Realizzazione sito web apps <> " />
                 <section className="footer" aria-label="Contatti">
-                    <ContactsWhy />
-                        <h2 aria-level="2">contatto diretto<span className="square">|</span></h2>
+                        <h2 aria-level="2">domande? proposte?<span className="square">|</span></h2>
                         <form
                         name="contact"
                         method="post"
@@ -48,39 +48,38 @@ function encode(data) {
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         onSubmit={handleSubmit}
+                        className="form"
                         >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p hidden>
-                            <label>
-                            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                            Your name:
-                            <br />
-                            <input type="text" name="name" onChange={handleChange} />
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                            Your email:
-                            <br />
-                            <input type="email" name="email" onChange={handleChange} />
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                            Message:
-                            <br />
-                            <textarea name="message" onChange={handleChange} />
-                            </label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
+                            <input type="hidden" name="form-name" value="contact" />
+                            <div hidden>
+                                <label>
+                                Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                                </label>
+                            </div>
+                            <div className="form-row">
+                                <label>
+                                <span className="label">nome</span>
+                                <input type="text" name="name" onChange={handleChange} />
+                                </label>
+                            </div>
+                            <div className="form-row">
+                                <label>
+                                <span className="label">e-mail</span>
+                                <input type="email" name="email" onChange={handleChange} />
+                                </label>
+                            </div>
+                            <div className="form-row">
+                                <label>
+                                <span className="label">messaggio</span>
+                                <textarea name="message" rows="5" onChange={handleChange} />
+                                </label>
+                            </div>
+                            <div className="form-row">
+                                <button type="submit">invia messaggio</button>
+                            </div>
                         </form>
+                <ContactsWhy />
                 <Footer />
             </section>
     </Layout>

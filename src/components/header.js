@@ -1,6 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import ContactIcon from "../components/contact-icon"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import TextLoop from "react-text-loop";
 import "../css/header.scss"
 
 export default () => {
@@ -12,13 +12,6 @@ export default () => {
             details {
               domain
               logoLinkTitle
-            }
-            contacts {
-              tel
-              email
-              github
-              twitter
-              instagram
             }
           }
         }
@@ -32,58 +25,17 @@ export default () => {
             <a href="/" title={data.site.siteMetadata.details.logoLinkTitle}>{data.site.siteMetadata.details.domain}</a>
         </h1>
         <div className="toolbar" aria-label="Contatti">
-            <ul>
-              <li>
-                <ContactIcon 
-                  contactUrlPrefix="tel:" 
-                  contactUrl={data.site.siteMetadata.contacts.tel} 
-                  linkTitle="Contatto telefonico (link telefono / Whatsapp)" 
-                  icon="/images/whatsapp.svg" 
-                  altText="Whatsapp logo"
-                  linkTarget=""
-                />
-              </li>
-              <li>
-                <ContactIcon 
-                  contactUrlPrefix="mailto:" 
-                  contactUrl={data.site.siteMetadata.contacts.email} 
-                  linkTitle="Contatto email (link email)" 
-                  icon="/images/email.svg" 
-                  altText="Email logo"
-                  linkTarget=""
-                />
-              </li>
-              <li>
-                <ContactIcon 
-                  contactUrlPrefix="" 
-                  contactUrl={data.site.siteMetadata.contacts.github} 
-                  linkTitle="Profilo Github (link esterno)" 
-                  icon="/images/github.svg" 
-                  altText="Github logo" 
-                  linkTarget="_blank"
-                />
-              </li>
-              <li>
-                <ContactIcon 
-                  contactUrlPrefix="" 
-                  contactUrl={data.site.siteMetadata.contacts.twitter} 
-                  linkTitle="Profilo Twitter (link esterno)" 
-                  icon="/images/twitter.svg" 
-                  altText="Twitter logo" 
-                  linkTarget="_blank"
-                />
-              </li>
-              <li>
-                <ContactIcon 
-                  contactUrlPrefix="" 
-                  contactUrl={data.site.siteMetadata.contacts.instagram} 
-                  linkTitle="Profilo Instagram (link esterno)" 
-                  icon="/images/instagram.svg" 
-                  altText="Instagram logo" 
-                  linkTarget="_blank"
-                />
-              </li>
-            </ul>
+          <Link className="header-button" title="Domande? Proposte? Contattami!" to="/contacts">
+            <span className="mobile-off">
+              <TextLoop mask={true} interval={[3000, 2000]} springConfig={{ stiffness: 340, damping: 30 }}>
+                <span>domande?</span>
+                <span>progetti?</span>
+                <span>proposte?</span>
+                <span>consulenza?</span>
+                <span>collaborazione?</span>
+              </TextLoop>
+            </span><img src="/images/form.svg" alt="Form contatti" />
+          </Link>
         </div>
     </header>
   )

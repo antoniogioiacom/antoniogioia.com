@@ -1,19 +1,39 @@
 *,
 *:before,
 *:after {
-  @include box-sizing(border-box);
+    @include box-sizing(border-box);
 }
 
-html, body, div, span, h1, h2, h3, h4, p, a, img, small, strong, ul, li, pre, code {
-  margin: 0;
-  padding: 0;
-  border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+img,
+small,
+strong,
+ul,
+li,
+pre,
+code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-footer, header, section, article, picture {
+footer,
+header,
+section,
+article,
+picture {
     display: block;
     margin: 0;
     padding: 0;
@@ -24,17 +44,17 @@ body {
 }
 
 *:focus {
-  outline: 1px dashed $theme-grey;
+    outline: 1px dashed $theme-grey;
 }
 
 ul {
     list-style: none;
     &li {
-      display: inline-block;
+        display: inline-block;
     }
 }
 
-$theme-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$theme-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 $theme-font-size: 16px;
 $theme-letter-spacing: 0.03rem;
 $base-spacing: rem(30px);
@@ -42,7 +62,9 @@ $base-border-radius: rem(3px);
 
 $header-height: rem(60px);
 
-*, html, body {
+*,
+html,
+body {
     font-size: $theme-font-size;
     font-family: $theme-font-family;
     letter-spacing: $theme-letter-spacing;
@@ -52,16 +74,27 @@ $header-height: rem(60px);
     -ms-text-size-adjust: 100%;
 }
 
-html, body {
-  background: $background-page;
+html,
+body {
+    background: $background-page;
 }
 
 .no-webp body {
-  @include background-image($background-page, "/images/bg.jpg", center, rem(-90px));
+    @include background-image(
+        $background-page,
+        "/images/bg.jpg",
+        center,
+        rem(-90px)
+    );
 }
-  
+
 .webp body {
-  @include background-image($background-page, "/images/bg.webp", center, rem(-90px));
+    @include background-image(
+        $background-page,
+        "/images/bg.webp",
+        center,
+        rem(-90px)
+    );
 }
 
 a {
@@ -74,7 +107,7 @@ a {
     }
 }
 
-a.external:hover::after{
+a.external:hover::after {
     content: " ⇢";
     color: $theme-green-dark;
 }
@@ -82,38 +115,38 @@ a.external:hover::after{
 h1,
 h2,
 h3 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 h1 {
-  display: inline-block;
+    display: inline-block;
 }
 
 h2 {
-  display: block;
-  font-size: rem(20px);
-  color: $theme-grey;
-  padding: $base-spacing;
-  font-weight: bold;
+    display: block;
+    font-size: rem(20px);
+    color: $theme-grey;
+    padding: $base-spacing;
+    font-weight: bold;
 }
 
 h3 {
-  display: inline-block;
-  font-size: rem(16px);
-  color: lighten($theme-grey, 20%);
-  text-align: center;
-  padding: $base-spacing;
-  border: rem(1px) solid $theme-green-dark;
-  border-radius: $base-border-radius;
+    display: inline-block;
+    font-size: rem(16px);
+    color: lighten($theme-grey, 20%);
+    text-align: center;
+    padding: $base-spacing;
+    border: rem(1px) solid $theme-green-dark;
+    border-radius: $base-border-radius;
 }
 
 small {
-  color: darken($theme-grey, 10%);
-  font-size: rem(16px);
-  
-  a {
     color: darken($theme-grey, 10%);
-  }
+    font-size: rem(16px);
+
+    a {
+        color: darken($theme-grey, 10%);
+    }
 }
 
 pre {
@@ -139,22 +172,22 @@ code {
 }
 
 .square {
-  color: $theme-green-light;
-  display: inline-block;
-  margin:0 rem(8px) 0 0;
-  animation: pulse .8s ease-out;
-  animation-iteration-count: infinite;
-  opacity: 0;
+    color: $theme-green-light;
+    display: inline-block;
+    margin: 0 rem(8px) 0 0;
+    animation: pulse 0.8s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
 }
-  
+
 .square-alt {
-  color: $theme-green-light;
-  margin-right: rem(16px);
+    color: $theme-green-light;
+    margin-right: rem(16px);
 }
-  
+
 .square-footer {
-  color: $theme-green-editor;
-  font-size: rem(16px);
+    color: $theme-green-editor;
+    font-size: rem(16px);
 }
 
 .mobile-off {
@@ -166,34 +199,50 @@ code {
 }
 
 @media only screen and (min-height: 300px) and (max-height: 740px) {
+    .no-webp body {
+        @include background-image(
+            $background-page,
+            "/images/bg.jpg",
+            center,
+            30%
+        );
+    }
 
-  .no-webp body {
-    @include background-image($background-page, "/images/bg.jpg", center, 30%);
-  }
-    
-  .webp body {
-    @include background-image($background-page, "/images/bg.webp", center, 30%);
-  }
-
+    .webp body {
+        @include background-image(
+            $background-page,
+            "/images/bg.webp",
+            center,
+            30%
+        );
+    }
 }
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
+    .no-webp body {
+        @include background-image(
+            $background-page,
+            "/images/bg.jpg",
+            center,
+            center
+        );
+    }
 
-  .no-webp body {
-    @include background-image($background-page, "/images/bg.jpg", center, center);
-  }
-    
-  .webp body {
-    @include background-image($background-page, "/images/bg.webp", center, center);
-  }
+    .webp body {
+        @include background-image(
+            $background-page,
+            "/images/bg.webp",
+            center,
+            center
+        );
+    }
 
-  h2 {
-    padding: $base-spacing 0;
-    white-space: nowrap;
-  }
+    h2 {
+        padding: $base-spacing 0;
+        white-space: nowrap;
+    }
 
-  small {
-    line-height: rem(21px);
-  }
-
+    small {
+        line-height: rem(21px);
+    }
 }

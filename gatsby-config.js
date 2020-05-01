@@ -30,17 +30,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src: '/scripts/modernizr-custom.js', 
+        src: '/scripts/modernizr-custom.js',
       },
     },
     `gatsby-plugin-advanced-sitemap`,
     {
       resolve: 'gatsby-plugin-feed-generator',
       options: {
-      generator: `GatsbyJS`,
-      rss: true,
-      json: true,
-      siteQuery: `
+        generator: `GatsbyJS`,
+        rss: true,
+        json: true,
+        siteQuery: `
         {
           site {
             siteMetadata {
@@ -52,10 +52,10 @@ module.exports = {
           }
         }
       `,
-      feeds: [
-        {
-          name: 'feed', 
-          query: `
+        feeds: [
+          {
+            name: 'feed',
+            query: `
           {
             allMarkdownRemark(
               sort: {order: DESC, fields: [frontmatter___date]},
@@ -74,19 +74,19 @@ module.exports = {
             }
           }
           `,
-          normalize: ({ query: { site, allMarkdownRemark } }) => {
-            return allMarkdownRemark.edges.map(edge => {
-              return {
-                title: edge.node.frontmatter.title,
-                date: edge.node.frontmatter.date,
-                url: site.siteMetadata.siteUrl + edge.node.frontmatter.filepath,
-                html: edge.node.html,
-              }
-            })
+            normalize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return {
+                  title: edge.node.frontmatter.title,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.filepath,
+                  html: edge.node.html,
+                }
+              })
+            },
           },
-        },
-      ],
-    }
+        ],
+      }
     },
   ]
 }

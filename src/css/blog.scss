@@ -12,22 +12,22 @@ $theme-font-size: $base-font-size;
 @import "./mixin.scss";
 
 // Paragraph Styles
-$paragraph-color      : #505050;
-$paragraph-size       : rem(16px);
+$paragraph-color: #505050;
+$paragraph-size: rem(16px);
 $paragraph-line-height: 1.6em;
-$paragraph-margin     : 20px;
+$paragraph-margin: 20px;
 
 // Header Styles
-$header-color      : #000000;
-$header-size       : rem(32px);
+$header-color: #000000;
+$header-size: rem(32px);
 $header-line-height: 1.25em;
-$header-margin     : $paragraph-margin * 1.2;
+$header-margin: $paragraph-margin * 1.2;
 
 // Blockquote Styles
-$blockquote-color      : #505050;
-$blockquote-size       : rem(23px);
+$blockquote-color: #505050;
+$blockquote-size: rem(23px);
 $blockquote-line-height: 1.5em;
-$blockquote-margin     : $paragraph-margin * 1.5;
+$blockquote-margin: $paragraph-margin * 1.5;
 
 // Links
 $link-color: #124813;
@@ -37,14 +37,14 @@ $hr-margin: 30px;
 
 // Type Misc
 $font-weight-bold: 800;
-$border-color: #DADADA;
+$border-color: #dadada;
 
 // Headers
-.blog h1, 
-.blog h2, 
-.blog h3, 
-.blog h4, 
-.blog h5, 
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
 .blog h6 {
     margin-top: $header-margin * 1.5;
     color: $header-color;
@@ -91,8 +91,6 @@ $border-color: #DADADA;
     margin-bottom: $header-margin / 2;
 }
 
-
-
 // Paragraphs
 .blog p {
     margin-bottom: $paragraph-margin;
@@ -105,8 +103,6 @@ $border-color: #DADADA;
     }
 }
 
-
-
 // Links
 .blog a {
     color: lighten($link-color, 20%);
@@ -116,10 +112,8 @@ $border-color: #DADADA;
 
     &:hover {
         color: darken($link-color, 30%);
-
     }
 }
-
 
 // Lists
 .blog ul,
@@ -140,13 +134,11 @@ $border-color: #DADADA;
 }
 
 .blog ul {
-
     li {
         list-style: disc;
     }
 
     ul {
-
         li {
             list-style: circle;
         }
@@ -154,12 +146,10 @@ $border-color: #DADADA;
 }
 
 .blog ol {
-
     li {
         list-style: decimal;
     }
 }
-
 
 // hr
 .blog hr {
@@ -168,7 +158,6 @@ $border-color: #DADADA;
     border: none;
     background-color: $border-color;
 }
-
 
 // Blockquote
 .blog blockquote {
@@ -180,7 +169,6 @@ $border-color: #DADADA;
     font-style: italic;
 }
 
-
 // Tables
 .blog table {
     width: 100%;
@@ -188,7 +176,9 @@ $border-color: #DADADA;
     border-collapse: collapse;
 }
 
-.blog table, .blog td, .blog th {
+.blog table,
+.blog td,
+.blog th {
     border: 1px solid $border-color;
     text-align: left;
 }
@@ -197,10 +187,10 @@ $border-color: #DADADA;
     font-weight: $font-weight-bold;
 }
 
-.blog th, .blog td {
+.blog th,
+.blog td {
     padding: 15px;
 }
-
 
 // Figure
 .blog figure {
@@ -216,7 +206,6 @@ $border-color: #DADADA;
     color: lighten($paragraph-color, 10%);
     font-size: $paragraph-margin * 0.8;
 }
-
 
 // Code
 .blog pre {
@@ -249,9 +238,6 @@ $border-color: #DADADA;
     border-radius: 3px;
 }
 
-
-
-// Misc Styles
 .blog em,
 .blog i,
 .blog .italic {
@@ -288,22 +274,58 @@ $border-color: #DADADA;
     margin: $blockquote-margin auto;
 }
 
-@media only screen and (min-width: 661px) and (max-width: 1280px) {
+.blog-post-footer {
+    position: relative;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+}
 
+.blog-post-feed {
+    height: 48px;
+    line-height: 48px;
+}
+
+.blog-post-footer .blog-post-feed {
+    float: right;
+}
+
+.blog-post-footer .blog-feed-icon {
+    position: relative;
+    top: rem(-23px);
+}
+
+.blog-feed-icon {
+    width: rem(32px);
+    height: rem(32px);
+    filter: $filter-icon;
+}
+
+.blog-post-footer .blog-feed-icon {
+    width: rem(32px);
+    height: rem(32px);
+    filter: $filter-icon;
+}
+
+.blog-post-feed:hover .blog-feed-icon {
+    filter: $filter-icon-theme-green-dark;
+}
+
+@media only screen and (min-width: 661px) and (max-width: 1280px) {
     .blog h1 {
         font-size: $header-size / 1.4;
     }
-    
+
     .blog h2 {
         font-size: $header-size / 1.5;
         white-space: normal;
     }
-    
+
     .blog h3 {
         text-align: left;
         font-size: $header-size / 1.6;
     }
-    
+
     .blog h4 {
         font-size: $header-size / 1.65;
     }
@@ -316,25 +338,23 @@ $border-color: #DADADA;
         width: 100%;
         padding: 20px;
     }
-
 }
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
-
     .blog h1 {
         font-size: $header-size / 1.5;
     }
-    
+
     .blog h2 {
         font-size: $header-size / 1.65;
         white-space: normal;
     }
-    
+
     .blog h3 {
         text-align: left;
         font-size: $header-size / 1.7;
     }
-    
+
     .blog h4 {
         font-size: $header-size / 1.75;
     }

@@ -13,7 +13,7 @@ html, body, div, span, h1, h2, h3, h4, p, a, img, small, strong, ul, li, pre, co
 	vertical-align: baseline;
 }
 
-footer, header, section, article {
+footer, header, section, article, picture {
     display: block;
     margin: 0;
     padding: 0;
@@ -56,8 +56,12 @@ html, body {
   background: $background-page;
 }
 
-body {
+.no-webp body {
   @include background-image($background-page, "/images/bg.jpg", center, rem(-90px));
+}
+  
+.webp body {
+  @include background-image($background-page, "/images/bg.webp", center, rem(-90px));
 }
 
 a {

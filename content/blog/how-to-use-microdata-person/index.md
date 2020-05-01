@@ -13,7 +13,7 @@ Antonio Gioia, 2013
 
 ***
 
-![Cover](/images/blog/cover-seo.jpg)
+![Cover](https://antoniogioia.com/images/blog/cover-seo.jpg)
 
 ***
 
@@ -23,7 +23,7 @@ Introduction to microdata
 [Microdata specification](https://html.spec.whatwg.org/multipage/microdata.html#microdata), one of the new **html5** features, allows content producers to describe a specific type of information. the structured data can be read and used by search engines to give more specific results, for example google will use this data to enrich the results of a query with a **rich snippet**, [a fast introduction to microdata in this video](https://www.youtube.com/watch?v=A-kX0Aut-18) and an example below: 
 
 
-![Image of Google rich snippets](/images/blog/google-rich-snippets.png)
+![Image of Google rich snippets](https://antoniogioia.com/images/blog/google-rich-snippets.png)
 
 A more detailed search result gives users a better idea of your content and improves your **search engine optimization**.
 
@@ -73,19 +73,19 @@ Test your structured data
 You can test microdata markup with the [google structured data testing tool](https://search.google.com/structured-data/testing-tool). 
 
 
-![Image of Google structured data testing tool](/images/blog/google-scructured-data-testing-tool.png)
+![Image of Google structured data testing tool](https://antoniogioia.com/images/blog/google-scructured-data-testing-tool.png)
 
 
 You can test a url or a piece of html, if we paste the example code from above into **code snippet** form returns a result page with the extracted structured data:
 
 
-![Image of Google structured data testing tool results](/images/blog/structured-data-test-results.png)
+![Image of Google structured data testing tool results](https://antoniogioia.com/images/blog/structured-data-test-results.png)
 
 
 And Person item in details:
 
 
-![Image of Google structured data testing tool results person](/images/blog/structured-data-test-person.png)
+![Image of Google structured data testing tool results person](https://antoniogioia.com/images/blog/structured-data-test-person.png)
 
 
 Links to know more about microdata

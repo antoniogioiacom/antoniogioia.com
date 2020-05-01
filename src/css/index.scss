@@ -22,11 +22,18 @@
 .articles {
     width: 100%;
     background: $background-section;
-    @include background-image($background-page, "/images/bg-articles.jpg", center, center);
     padding: ($base-spacing * 4) 0;
     text-align: center;
     border-top: rem(4px) solid $theme-green-dark;
     border-bottom: rem(4px) solid $theme-green-dark;
+}
+
+.no-webp .articles {
+    @include background-image($background-page, "/images/bg-articles.jpg", center, center);
+}
+  
+.webp .articles {
+    @include background-image($background-page, "/images/bg-articles.webp", center, center);
 }
 
 .projects {

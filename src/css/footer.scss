@@ -43,7 +43,14 @@
   left: 0;
   right: 0;
   height: rem(60px);
+}
+
+.no-webp .footer-logo {
   background: url(/images/logo-alt.png) no-repeat center center; 
+}
+  
+.webp .footer-logo {
+  background: url(/images/logo-alt.webp) no-repeat center center; 
 }
 
 @media only screen and (min-width: 661px) and (max-width: 1280px) {

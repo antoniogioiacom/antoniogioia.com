@@ -27,6 +27,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: '/scripts/modernizr-custom.js', 
+      },
+    },
     `gatsby-plugin-advanced-sitemap`
   ]
 }

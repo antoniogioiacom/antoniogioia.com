@@ -13,7 +13,7 @@ Antonio Gioia, 2015
 
 ***
 
-![Cover](/images/blog/cover-ssh.jpg)
+![Cover](https://antoniogioia.com/images/blog/cover-ssh.jpg)
 
 ***
 

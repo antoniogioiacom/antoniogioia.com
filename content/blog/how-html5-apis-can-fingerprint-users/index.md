@@ -13,7 +13,7 @@ Antonio Gioia, 2015
 
 ***
 
-![Cover](/images/blog/cover-html.jpg)
+![Cover](https://antoniogioia.com/images/blog/cover-html.jpg)
 
 ***
 

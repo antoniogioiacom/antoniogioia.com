@@ -13,7 +13,7 @@ Antonio Gioia, 2020
 
 ***
 
-![Cover](/images/blog/cover-vps.jpg)
+![Cover](https://antoniogioia.com/images/blog/cover-vps.jpg)
 
 ***
 

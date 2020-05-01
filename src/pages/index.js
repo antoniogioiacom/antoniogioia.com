@@ -28,7 +28,7 @@ export default () => {
           content="code"
           source="about"
         />
-        <div class="mobile-on">
+        <div className="mobile-on">
             <MainMobile />
         </div>
       </section>
@@ -41,7 +41,11 @@ export default () => {
               <li className="box">
                   <a href="https://github.com/antoniogioiacom/startapp" title="Repository Github (link esterno)" target="_blank" rel="noopener noreferrer">
                       <h3 aria-level="3">startapp</h3>
-                      <img className="projects-img" src="/images/startapp.jpg" alt="Koa.js app boilerplate" />
+                      <picture>
+                        <source srcSet="/images/startapp.webp" type="image/webp" />
+                        <source srcSet="/images/startapp.jpg" type="image/jpeg" /> 
+                        <img className="projects-img" src="/images/startapp.webp" alt="Koa.js app boilerplate" />
+                      </picture>
                       <span>javascript</span>
                       <div className="project-desc">
                           <div className="project-desc-inner">
@@ -56,7 +60,11 @@ export default () => {
               <li className="box">
                   <a href="https://github.com/antoniogioiacom/wire" title="Repository Github (link esterno)" target="_blank" rel="noopener noreferrer">
                       <h3 aria-level="3">wire</h3>
-                      <img className="projects-img" src="/images/wire.jpg" alt="Linux command line manager per reti wireless" />
+                      <picture>
+                        <source srcSet="/images/wire.webp" type="image/webp" />
+                        <source srcSet="/images/wire.jpg" type="image/jpeg" /> 
+                        <img className="projects-img" src="/images/wire.webp" alt="Linux command line manager per reti wireless" />
+                      </picture>
                       <span>shell</span>
                       <div className="project-desc">
                           <div className="project-desc-inner">
@@ -71,7 +79,11 @@ export default () => {
               <li className="box">
                   <a href="https://play.google.com/store/apps/details?id=trade.muchbtc.app" title="App su google play store (link esterno)" target="_blank" rel="noopener noreferrer">
                       <h3 aria-level="3">muchbtc</h3>
-                      <img className="projects-img" src="/images/muchbtc.jpg" alt="Bitcoin portfolio Android app" />
+                      <picture>
+                        <source srcSet="/images/muchbtc.webp" type="image/webp" />
+                        <source srcSet="/images/muchbtc.jpg" type="image/jpeg" /> 
+                        <img className="projects-img" src="/images/muchbtc.webp" alt="Bitcoin portfolio Android app" />
+                      </picture>
                       <span>android</span>
                       <div className="project-desc">
                           <div className="project-desc-inner">
@@ -87,9 +99,33 @@ export default () => {
           <h2 aria-level="2">collaborazioni<span className="square">|</span></h2>
           <div className="collabs">
               <ul>
-                  <li><a href="http://apuliastudentservice.com" title="Apulia Student Service (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/apuliastudentservice.png" alt="Apulia Student Service logo" className="sm" /></a></li>
-                  <li><a href="https://www.cercoalloggio.com" title="Cercoalloggio.com (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/cercoalloggio.png" alt="Cercoalloggio.com logo" /></a></li>
-                  <li><a href="http://spassiaisi.photo" title="Spassiaisi Photo Studio (link esterno)" target="_blank" rel="noopener noreferrer"><img src="/images/spassiaisi.png" alt="Spassiaisi logo" className="sm" /></a></li>
+                  <li>
+                      <a href="http://apuliastudentservice.com" title="Apulia Student Service (link esterno)" target="_blank" rel="noopener noreferrer">
+                      <picture>
+                        <source srcSet="/images/apuliastudentservice.webp" type="image/webp" />
+                        <source srcSet="/images/apuliastudentservice.png" type="image/jpeg" /> 
+                        <img className="sm" src="/images/apuliastudentservice.webp" alt="Apulia Student Service logo" />
+                      </picture>
+                      </a>
+                </li>
+                  <li>
+                      <a href="https://www.cercoalloggio.com" title="Cercoalloggio.com (link esterno)" target="_blank" rel="noopener noreferrer">
+                      <picture>
+                        <source srcSet="/images/cercoalloggio.webp" type="image/webp" />
+                        <source srcSet="/images/cercoalloggio.png" type="image/jpeg" /> 
+                        <img className="sm" src="/images/cercoalloggio.webp" alt="Cercoalloggio.com logo" />
+                      </picture>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://spassiaisi.photo" title="Spassiaisi Photo Studio (link esterno)" target="_blank" rel="noopener noreferrer">
+                      <picture>
+                            <source srcSet="/images/spassiaisi.webp" type="image/webp" />
+                            <source srcSet="/images/spassiaisi.png" type="image/jpeg" /> 
+                            <img className="sm" src="/images/spassiaisi.webp" alt="Spassiaisi logo" />
+                      </picture>
+                      </a>
+                  </li>
               </ul>
           </div>
       </section>

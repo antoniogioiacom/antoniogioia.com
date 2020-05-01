@@ -44,13 +44,15 @@ header h1{
     font-weight: 700;
     font-size: rem(18px);
     color: $theme-grey;
+    position: relative;
+    right: $base-spacing / 2;
 }
 
 .header-button img {
     width: rem(36px);
     height: rem(36px);
     filter: $filter-icon;
-    position: relative;
+    position: absolute;
     top: rem(10px);
     @include transition(filter, 0.5s, ease-in-out);
 }

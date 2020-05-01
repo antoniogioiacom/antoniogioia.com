@@ -76,12 +76,12 @@ export default () => {
               />
             </li>
         </ul>
-        <div itemscope itemtype="http://schema.org/Person">
+        <div itemScope itemType="http://schema.org/Person">
           <small>
-            <span itemprop="name">Antonio Gioia </span><br class="mobile-on" />
-            <span className="square-footer">□</span><span itemprop="jobTitle"> Web developer </span><br class="mobile-on" />
-            <span className="square-footer">□</span> P. Iva 02621900741 <br class="mobile-on" />
-            <span className="square-footer">□</span> <span itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Lecce</span>, <span itemprop="addressCountry">Italia</span></span>
+            <span itemProp="name">Antonio Gioia </span><br className="mobile-on" />
+            <span className="square-footer">□</span><span itemProp="jobTitle"> Web developer </span><br className="mobile-on" />
+            <span className="square-footer">□</span> P. Iva 02621900741 <br className="mobile-on" />
+            <span className="square-footer">□</span> <span itemScope itemType="http://schema.org/PostalAddress"><span itemProp="addressLocality">Lecce</span>, <span itemProp="addressCountry">Italia</span></span>
           </small>
         </div>
         <div className="footer-logo"></div>

@@ -78,7 +78,7 @@ export default () => {
         </ul>
         <div itemScope itemType="http://schema.org/Person">
           <small>
-            <span itemProp="name">Antonio Gioia </span><br className="mobile-on" />
+          <a itemProp="url" href="https://antoniogioia.com" title="Full stack web developer, Antonio Gioia"><span itemProp="name">Antonio Gioia</span></a> <br className="mobile-on" />
             <span className="square-footer">□</span><span itemProp="jobTitle"> Web developer </span><br className="mobile-on" />
             <span className="square-footer">□</span> P. Iva 02621900741 <br className="mobile-on" />
             <span className="square-footer">□</span> <span itemScope itemType="http://schema.org/PostalAddress"><span itemProp="addressLocality">Lecce</span>, <span itemProp="addressCountry">Italia</span></span>

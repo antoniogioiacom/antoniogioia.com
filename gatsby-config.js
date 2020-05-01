@@ -33,6 +33,60 @@ module.exports = {
         src: '/scripts/modernizr-custom.js', 
       },
     },
-    `gatsby-plugin-advanced-sitemap`
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: 'gatsby-plugin-feed-generator',
+      options: {
+      generator: `GatsbyJS`,
+      rss: true,
+      json: true,
+      siteQuery: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              author
+            }
+          }
+        }
+      `,
+      feeds: [
+        {
+          name: 'feed', 
+          query: `
+          {
+            allMarkdownRemark(
+              sort: {order: DESC, fields: [frontmatter___date]},
+              limit: 100,
+              ) {
+              edges {
+                node {
+                  html
+                  frontmatter {
+                    date
+                    filepath
+                    title
+                  }
+                }
+              }
+            }
+          }
+          `,
+          normalize: ({ query: { site, allMarkdownRemark } }) => {
+            return allMarkdownRemark.edges.map(edge => {
+              return {
+                title: edge.node.frontmatter.title,
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + edge.node.frontmatter.filepath,
+                html: edge.node.html,
+              }
+            })
+          },
+        },
+      ],
+    }
+    },
   ]
 }

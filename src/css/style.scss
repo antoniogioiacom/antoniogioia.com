@@ -167,8 +167,12 @@ code {
 
 @media only screen and (min-height: 300px) and (max-height: 740px) {
 
-  body {
+  .no-webp body {
     @include background-image($background-page, "/images/bg.jpg", center, 30%);
+  }
+    
+  .webp body {
+    @include background-image($background-page, "/images/bg.webp", center, 30%);
   }
 
 }
@@ -176,8 +180,12 @@ code {
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
 
-  body {
+  .no-webp body {
     @include background-image($background-page, "/images/bg.jpg", center, center);
+  }
+    
+  .webp body {
+    @include background-image($background-page, "/images/bg.webp", center, center);
   }
 
   h2 {

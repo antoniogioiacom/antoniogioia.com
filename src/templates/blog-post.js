@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data }) => {
     return (
         <Layout>
             <Helmet
-                title={`Blog <> ${post.frontmatter.title} <> ${data.site.siteMetadata.author}`}
+                title={`Blog <> ${post.frontmatter.title} <> ${data.site.siteMetadata.title}`}
             >
                 <html lang="it-IT" />
                 <meta

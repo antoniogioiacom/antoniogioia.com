@@ -19,14 +19,13 @@
 }
 
 .contacts-why li:before {
-    content: '□';
+    content: "□";
     color: $theme-green-editor;
     position: absolute;
     left: rem(5px);
 }
 
 @media only screen and (min-width: 661px) and (max-width: 1280px) {
-
     .contacts-why {
         margin: 0 $base-spacing;
         padding: ($base-spacing / 2) 0;
@@ -35,7 +34,6 @@
 }
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
-
     .contacts-why {
         padding: 0;
         width: 100%;

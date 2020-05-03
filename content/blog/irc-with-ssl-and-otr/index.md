@@ -6,16 +6,15 @@ filepath: "/irc-with-ssl-and-otr"
 cover: "/images/blog/cover-encryption.jpg"
 ---
 
-IRC with SSL and OTR encryption
-===============================
+# IRC with SSL and OTR encryption
 
 Antonio Gioia, 2015
 
-***
+---
 
 ![Cover](https://antoniogioia.com/images/blog/cover-encryption.jpg)
 
-***
+---
 
 IRC is a chat protocol active since early nineties, it belongs to a time when internet services were developed for the sake of communication rather than for profit, intrusive advertising and social control.
 
@@ -23,8 +22,7 @@ You can chat on IRC with people all around the world, using **strong encryption*
 
 There are plenty of IRC servers with hundreds active channels each, all you need is a IRC client to access them. This article shows how to properly configure the open source IRC client [Irssi](https://irssi.org) to achieve an encrypted connection between your client and the server you connect and even more between you and the people you chat with.
 
-IRSSI
------
+## IRSSI
 
 Irssi is a minimal command line IRC client available for most Linux distributions, on recent Ubuntu and Debian is already compiled with SSL support but to enable OTR you need to install a plugin:
 
@@ -52,8 +50,7 @@ You can now connect to a server and chat on IRC. Use the commands `/connect` to 
 
 By default IRC establish a **not** secure connection but is very easy to improve security using SSL and OTR.
 
-SSL
----
+## SSL
 
 SSL creates an encrypted connection between your client and the IRC server. Assuming you want to connect to Indymedia IRC server, you would type:
 
@@ -73,8 +70,7 @@ If you cannot install an IRC client or your client does not support SSL, a few m
 
 Check the homepage of your favorite IRC server for instructions about SSL configuration.
 
-OTR (Off-the-Record Messaging)
-------------------------------
+## OTR (Off-the-Record Messaging)
 
 [OTR protocol](https://otr.cypherpunks.ca) provides **encryption**, **authentication**, **deniability** and **perfect forward secrecy** for instant messaging chat sessions. It works with IRC, Pidgin, Adium, Jitsi, WeeChat and [many others](https://en.wikipedia.org/wiki/Off-the-Record_Messaging#Client_support).
 
@@ -126,11 +122,11 @@ Use the command:
 
 Example: both you and the other person like the same punk band. You both agree to authenticate using the name of the band as secret. In real world scenario you would say something like:
 
-**you** > *let’s check if it’s really you, let’s authenticate with the name of our favorite punk band*
+**you** > _let’s check if it’s really you, let’s authenticate with the name of our favorite punk band_
 
-**person** > *ok, let’s do it ;)*
+**person** > _ok, let’s do it ;)_
 
-Assuming the favorite band name is *Wolfbrigade*, now you both type in your own client:
+Assuming the favorite band name is _Wolfbrigade_, now you both type in your own client:
 
     /otr auth wolfbrigade
 
@@ -178,16 +174,14 @@ And remove it from fingerprints file:
 
     /otr forget fingerprint
 
-Links
------
+## Links
 
-* [Irssi command line IRC client](https://irssi.org)
-* [Irssi OTR plugin](https://github.com/cryptodotis/irssi-otr)
-* [OTR protocol](https://otr.cypherpunks.ca)
+-   [Irssi command line IRC client](https://irssi.org)
+-   [Irssi OTR plugin](https://github.com/cryptodotis/irssi-otr)
+-   [OTR protocol](https://otr.cypherpunks.ca)
 
-***
+---
 
-Notes
------
+## Notes
 
 Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article contact me at [info@antoniogioia.com](info@antoniogioia.com).

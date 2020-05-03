@@ -5,7 +5,6 @@ import "../css/block-code.scss"
 import "../css/prism.scss"
 
 export default (props) => {
-
     useEffect(() => {
         Prism.highlightAll()
     })
@@ -57,7 +56,7 @@ const competenze_specifiche = [
 
 `
             default:
-            break;
+                break
         }
     }
 
@@ -65,7 +64,7 @@ const competenze_specifiche = [
         <div>
             <pre className="line-numbers">
                 <code className="language-javascript">
-                {renderCode(props.source)}
+                    {renderCode(props.source)}
                 </code>
             </pre>
         </div>

@@ -11,13 +11,13 @@
 .code-editor:after,
 .code-editor span.control:before,
 .code-editor span.after:after {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	content: '';
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    content: "";
     position: absolute;
-	z-index: 1;
+    z-index: 1;
 }
 
 .code-editor {
@@ -26,7 +26,7 @@
     @include box-shadow(0px 3px 30px 0px, $shadow);
     margin: 0 auto;
     padding-top: $base-spacing;
-    width: rem(748px); 
+    width: rem(748px);
     text-align: left;
     background-color: #2d2d2d;
     overflow: auto;
@@ -35,7 +35,7 @@
 .code-editor:before {
     font-weight: 500;
     color: #333;
-    padding-top: 6px; 
+    padding-top: 6px;
     text-align: center;
     top: 0;
     width: rem(748px);
@@ -59,65 +59,63 @@
 }
 
 .code-editor-stack {
-  position: absolute;
-  top: 55%;
-  left: 10%;
-  z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    z-index: 1;
 }
 
-.code-editor-about:before{
-	content: 'informazioni-personali.js';
+.code-editor-about:before {
+    content: "informazioni-personali.js";
 }
 
-.code-editor-skills:before{
-	content: 'competenze-tecniche.js';
+.code-editor-skills:before {
+    content: "competenze-tecniche.js";
 }
 
-.code-editor-stack:before{
-	content: 'componenti-stack-preferiti.html';
+.code-editor-stack:before {
+    content: "componenti-stack-preferiti.html";
 }
 
 .code-editor span.control:before {
-	content: '';
-	top: 10px;
-	z-index: 2;
-	padding: 6px;
+    content: "";
+    top: 10px;
+    z-index: 2;
+    padding: 6px;
     @include border-radius(rem(20px));
 }
 
 .code-editor span.control:nth-child(1):before {
-	margin-left: 15px;
-	background-color: #df6963;
-	
+    margin-left: 15px;
+    background-color: #df6963;
 }
 
 .code-editor span.control:nth-child(2):before {
-	margin-left: 35px;
-	background-color: #f5e18a;
-	
+    margin-left: 35px;
+    background-color: #f5e18a;
 }
 
 .code-editor span.control:nth-child(3):before {
-	margin-left: 55px;
-	background-color: #97c38a;
+    margin-left: 55px;
+    background-color: #97c38a;
 }
 
 @media only screen and (min-width: 661px) and (max-width: 768px) {
-	.code-editor {
-   		width: 640px; 
-	}
+    .code-editor {
+        width: 640px;
+    }
 
-	.code-editor:before {
-		width: 640px;
-	}
+    .code-editor:before {
+        width: 640px;
+    }
 }
 
 @media only screen and (max-width: 661px) {
-	.code-editor {
-		width: 640px;
-	}	
+    .code-editor {
+        width: 640px;
+    }
 
-	.code-editor:before {
-		width: 640px;
-	}
+    .code-editor:before {
+        width: 640px;
+    }
 }

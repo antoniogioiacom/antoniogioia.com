@@ -3,81 +3,77 @@
 @import "./style.scss";
 
 .footer {
-  position: relative;
-  background: $background-section;
-  padding: ($base-spacing * 3) 0 ($base-spacing * 4) 0;
-  text-align: center;
-  border-bottom: rem(60px) solid $theme-green-dark;
+    position: relative;
+    background: $background-section;
+    padding: ($base-spacing * 3) 0 ($base-spacing * 4) 0;
+    text-align: center;
+    border-bottom: rem(60px) solid $theme-green-dark;
 }
 
 .footer-links {
-  padding: $base-spacing 0 ($base-spacing * 2) 0;
-  position: relative;
-  text-align: center;
+    padding: $base-spacing 0 ($base-spacing * 2) 0;
+    position: relative;
+    text-align: center;
 }
 
 .footer-links li {
-  display: inline-block;
-  padding: $base-spacing;
+    display: inline-block;
+    padding: $base-spacing;
 }
 
 .footer-links .contact-icon {
-  width: rem(64px);
-  height: rem(64px);
-  filter: $filter-icon;
-  @include transition(filter, 0.5s, ease-in-out);
+    width: rem(64px);
+    height: rem(64px);
+    filter: $filter-icon;
+    @include transition(filter, 0.5s, ease-in-out);
 }
 
 .footer-links .contact-link {
-  margin: 0;
+    margin: 0;
 }
 
 .footer-links a:hover .contact-icon {
-  filter: $filter-icon-hover;
+    filter: $filter-icon-hover;
 }
 
 .footer-logo {
-  position: absolute;
-  bottom: rem(-60px);
-  z-index: 2;
-  left: 0;
-  right: 0;
-  height: rem(60px);
+    position: absolute;
+    bottom: rem(-60px);
+    z-index: 2;
+    left: 0;
+    right: 0;
+    height: rem(60px);
 }
 
 .no-webp .footer-logo {
-  background: url(/images/logo-alt.png) no-repeat center center; 
+    background: url(/images/logo-alt.png) no-repeat center center;
 }
-  
+
 .webp .footer-logo {
-  background: url(/images/logo-alt.webp) no-repeat center center; 
+    background: url(/images/logo-alt.webp) no-repeat center center;
 }
 
 @media only screen and (min-width: 661px) and (max-width: 1280px) {
+    .footer {
+        padding: ($base-spacing * 2) 0;
+    }
 
-  .footer {
-      padding: ($base-spacing * 2) 0;
-  }
-
-  .footer-links {
-    padding: 0 0 $base-spacing 0;
-  }
-
+    .footer-links {
+        padding: 0 0 $base-spacing 0;
+    }
 }
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
+    .footer {
+        padding: $base-spacing / 2;
+    }
 
-  .footer {
-    padding: $base-spacing / 2;
-  }
+    .footer-links {
+        padding: 0 0 $base-spacing 0;
+    }
 
-  .footer-links {
-    padding: 0 0 $base-spacing 0;
-  }
-  
-  .footer-links li {
-    padding: $base-spacing / 4;
-    width: 50%;
-  }
-
+    .footer-links li {
+        padding: $base-spacing / 4;
+        width: 50%;
+    }
 }

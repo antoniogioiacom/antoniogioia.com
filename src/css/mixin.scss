@@ -11,7 +11,7 @@
 
 @mixin background-image($color, $image, $x, $y) {
     background: $color;
-    background: url($image) no-repeat $x $y fixed; 
+    background: url($image) no-repeat $x $y fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

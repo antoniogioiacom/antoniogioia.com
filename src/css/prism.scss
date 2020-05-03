@@ -24,19 +24,19 @@ pre[class*="language-"] {
     position: relative;
     top: 0;
 }
- 
+
 pre[class*="language-"] {
     padding: 0.4em 0.25em;
     overflow: auto;
 }
- 
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
     background: #2d2d2d;
 }
 
 :not(pre) > code[class*="language-"] {
-    padding: .1em;
+    padding: 0.1em;
     white-space: normal;
     font-weight: 700;
 }
@@ -140,7 +140,7 @@ pre[class*="language-"].line-numbers > code {
     -ms-user-select: none;
     user-select: none;
 }
- 
+
 .line-numbers-rows > span {
     pointer-events: none;
     display: block;
@@ -153,4 +153,4 @@ pre[class*="language-"].line-numbers > code {
     display: block;
     padding-right: 0.8em;
     text-align: right;
-} 
+}

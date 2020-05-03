@@ -286,6 +286,11 @@ $border-color: #dadada;
     line-height: 48px;
 }
 
+.articles .blog-post-feed:before {
+    content: "";
+    left: 0;
+}
+
 .blog-post-footer .blog-post-feed {
     float: right;
 }

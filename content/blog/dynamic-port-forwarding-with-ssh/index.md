@@ -6,32 +6,30 @@ filepath: "/dynamic-port-forwarding-with-ssh"
 cover: "/images/blog/cover-ssh.jpg"
 ---
 
-Dynamic port forwarding with SSH and SOCKS5
-===========================================
+# Dynamic port forwarding with SSH and SOCKS5
 
 Antonio Gioia, 2015
 
-***
+---
 
 ![Cover](https://antoniogioia.com/images/blog/cover-ssh.jpg)
 
-***
+---
 
 In this article i collected all the necessary information and useful tips to create **SSH tunnels** between hosts in order to protect internet traffic with an encrypted layer.
 
 Contents:
 
-* What is SSH
-* Why you need to use a SSH tunnel
-* Public and private key pair
-* VPS setup and firewall
-* Dynamic port forwarding in details
-* Configure browser, email, instant messages
-* Optional configurations
-* Links
+-   What is SSH
+-   Why you need to use a SSH tunnel
+-   Public and private key pair
+-   VPS setup and firewall
+-   Dynamic port forwarding in details
+-   Configure browser, email, instant messages
+-   Optional configurations
+-   Links
 
-What is SSH
------------
+## What is SSH
 
 SSH stands for Secure Shell and is described on Wikipedia as “a cryptographic (encrypted) network protocol for initiating text-based shell sessions on remote machines in a secure way”.
 
@@ -39,35 +37,33 @@ SSH can do much more than remote shell. For example you can copy files from loca
 
 In this article i will explain how to forward and encrypted network traffic between a local SOCKS5 proxy and a VPS (virtual private server).
 
-* SSH enables port forwarding with encrypted tunnel
-* SOCKS5 (Socket Secure) provides a proxy server to route traffic between client and server using authentication
-* VPS is our remote server that connect us to internet
-* Applications needs to be configured to make use of the tunnel
+-   SSH enables port forwarding with encrypted tunnel
+-   SOCKS5 (Socket Secure) provides a proxy server to route traffic between client and server using authentication
+-   VPS is our remote server that connect us to internet
+-   Applications needs to be configured to make use of the tunnel
 
-Why you need a SSH tunnel
--------------------------
+## Why you need a SSH tunnel
 
 The answer is simple: SSH dynamic port forwarding is the fastest and cheapest way to protect your traffic from undesired eyes.
 
-* An additional layer to protect your identity
-* An encrypted channel of internet traffic
-* A less risky communication environment for your privacy
+-   An additional layer to protect your identity
+-   An encrypted channel of internet traffic
+-   A less risky communication environment for your privacy
 
 A few practical examples:
 
-* You can connect to open networks and no one can read in clear your network packets, assuming you carefully protect your private key
-* You can reach content blocked because of your location
-* You can circumvent firewalls
+-   You can connect to open networks and no one can read in clear your network packets, assuming you carefully protect your private key
+-   You can reach content blocked because of your location
+-   You can circumvent firewalls
 
-Private and public key pair
----------------------------
+## Private and public key pair
 
 The very first thing you need to setup is a private and public key pair. With this keys you can authenticate the client (your machine) on a remote server.
 
-* Generate both keys, private and public, on your computer
-* Protect private key with long, possibly complex pass phrase. You need to enter it every time you want to create a SSH connection
-* Copy the public key on the server you want to log in
-* SSH opens a connection only to clients matching the server public key with the right client private key
+-   Generate both keys, private and public, on your computer
+-   Protect private key with long, possibly complex pass phrase. You need to enter it every time you want to create a SSH connection
+-   Copy the public key on the server you want to log in
+-   SSH opens a connection only to clients matching the server public key with the right client private key
 
 This process ensures a higher level of security compared to passwords protected accounts vulnerable to brute force attacks.
 
@@ -85,8 +81,7 @@ Next step is to choose a name for the keys. If you would just press enter it wou
 
 Enter two times the pass phrase you want to use for your private key and you are done. Your keys are located in your home directory, `/.ssh/` folder: `/home/user/.ssh/id_rsa_tunnel` (private) and `/home/user/.ssh/id_rsa_tunnel.pub` (public) where /user/ is the user you are logged in.
 
-VPS setup and firewall
-----------------------
+## VPS setup and firewall
 
 Your remote host, a VPS in this case, is going to route your traffic to internet. Choose the right VPS provider according to your needs. Once you have the remote public IP it’s convenient to change your hosts file, assuming the public IP of your VPS is 34.86.122.31 (I just invented it) you can add this line to file `/etc/hosts` naming it “tunnel”:
 
@@ -161,8 +156,7 @@ Limits password log in attempts. Consider the use of [SSHguard](http://www.sshgu
 
 Restart firewall to enable changes. Your remote server is now ready.
 
-Dynamic port forwarding in details
-----------------------------------
+## Dynamic port forwarding in details
 
 You have now everything ready to create a SSH tunnel. Open a terminal on your computer and type:
 
@@ -172,11 +166,11 @@ If everything works as expected the tunnel is created after you type the pass ph
 
 The command in details:
 
-* `-D` enables dynamic forwarding
-* `8080` is the port of localhost you are going to listen with proxy, can be any port open of your computer
-* `-N` stops SSH from executing commands
-* `-p` is the port of the remote host you connect to, you configured the firewall server to keep port 5432 open
-* `-vv` is very verbose output on console (`-v` and `-vvv` are less and more verbose). I suggest to keep this option the very first times to have a better idea of what’s going on with the SSH connection and remove it later on.
+-   `-D` enables dynamic forwarding
+-   `8080` is the port of localhost you are going to listen with proxy, can be any port open of your computer
+-   `-N` stops SSH from executing commands
+-   `-p` is the port of the remote host you connect to, you configured the firewall server to keep port 5432 open
+-   `-vv` is very verbose output on console (`-v` and `-vvv` are less and more verbose). I suggest to keep this option the very first times to have a better idea of what’s going on with the SSH connection and remove it later on.
 
 You can fork the process in the background and keep SSH quiet with the options `-f` and `-q`.
 
@@ -190,8 +184,7 @@ Note this will work using your default private key. To specify the private key y
 
 You SSH connection is now in the background. To close it you have to terminate the process; use `htop` to find and kill it.
 
-Configure browser, email, instant messages
-------------------------------------------
+## Configure browser, email, instant messages
 
 Every applications not listening on SOCKS proxy will leak packets out of the tunnel. It’s important you configure all applications you normally use for internet to make use of the proxy.
 
@@ -229,8 +222,7 @@ If you are more old school and chat over IRC with `irssi` client, type within th
 
 Note that 127.0.0.1 is the address of `localhost`. I wrote an article about [IRC, SSL and OTR configurations](/irc-with-ssl-and-otr) if you want to know more.
 
-Optional configurations
------------------------
+## Optional configurations
 
 You can now create shortcuts for future SSH sessions. You can also run a script at boot time that opens a tunnel in background. You can find many examples on internet about it. I personally prefer to create and delete tunnels as i need it, without any automation.
 
@@ -270,19 +262,17 @@ and repeat the ssh-add command. Log in your server with SSH now and if everythin
 
 Another important add on useful for tunnels is [autossh](https://www.harding.motd.ca/autossh), a tool to automate SSH reconnections if the tunnel drops for network connectivity problems.
 
-Links
------
+## Links
 
-* [OpenSSH, project homepage](http://www.openssh.com)
-* [SOCKS, protocol standards](https://www.ietf.org/rfc/rfc1928.txt)
-* [Ufw, un-complicated firewall](https://wiki.ubuntu.com/UncomplicatedFirewall)
-* [SSHguard, log monitor](http://www.sshguard.net)
-* [autossh, restarts SSH sessions and tunnels](http://www.harding.motd.ca/autossh)
+-   [OpenSSH, project homepage](http://www.openssh.com)
+-   [SOCKS, protocol standards](https://www.ietf.org/rfc/rfc1928.txt)
+-   [Ufw, un-complicated firewall](https://wiki.ubuntu.com/UncomplicatedFirewall)
+-   [SSHguard, log monitor](http://www.sshguard.net)
+-   [autossh, restarts SSH sessions and tunnels](http://www.harding.motd.ca/autossh)
 
-***
+---
 
-Notes
------
+## Notes
 
 Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article contact me at [info@antoniogioia.com](info@antoniogioia.com).
 

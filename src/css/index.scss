@@ -29,11 +29,21 @@
 }
 
 .no-webp .articles {
-    @include background-image($background-page, "/images/bg-articles.jpg", center, center);
+    @include background-image(
+        $background-page,
+        "/images/bg-articles.jpg",
+        center,
+        center
+    );
 }
-  
+
 .webp .articles {
-    @include background-image($background-page, "/images/bg-articles.webp", center, center);
+    @include background-image(
+        $background-page,
+        "/images/bg-articles.webp",
+        center,
+        center
+    );
 }
 
 .projects {
@@ -71,7 +81,7 @@
 }
 
 .projects .box p {
-    padding: ($base-spacing /2) 0 ($base-spacing /2) 0;
+    padding: ($base-spacing / 2) 0 ($base-spacing / 2) 0;
     font-size: rem(18px);
     color: $theme-grey;
 }
@@ -145,7 +155,6 @@
 }
 
 @media only screen and (min-height: 300px) and (max-height: 740px) {
-
     .default {
         height: 100%;
         min-height: rem(500px);
@@ -158,11 +167,9 @@
         min-height: rem(700px);
         overflow: auto;
     }
-
 }
 
 @media only screen and (min-width: 661px) and (max-width: 1280px) {
-
     .articles,
     .projects {
         padding: ($base-spacing * 2) 0;
@@ -185,7 +192,7 @@
 
     .collabs ul {
         height: auto;
-        padding: 0
+        padding: 0;
     }
 
     .collabs ul li {
@@ -206,7 +213,6 @@
 }
 
 @media only screen and (min-width: 240px) and (max-width: 660px) {
-
     .mobile-off {
         display: none;
     }
@@ -257,7 +263,7 @@
         padding: 0;
         font-size: rem(16px);
     }
-    
+
     .projects-img {
         width: rem(120px);
         height: rem(120px);
@@ -291,5 +297,4 @@
     .collabs ul li img.sm {
         max-width: rem(95px);
     }
-    
 }

@@ -108,12 +108,15 @@ Now we need to define the callback function for the POST request arriving from t
                 const email = user.email;
 
                 // check in database if user with that email exists
-                [...]
+                // ...
 
                 // if exists show content for registered users:
                 req.login(user, function(err) {
                     return res.redirect("/my-contents-page");
                 });
+
+                // application logic code
+                // ...
 
                 // if doesn't exist redirect to complete registration page
                 req.login(user, function(err) {

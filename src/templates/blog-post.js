@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data }) => {
             <Helmet
                 title={`Blog <> ${post.frontmatter.title} <> ${data.site.siteMetadata.title}`}
             >
-                <html lang="it-IT" />
+                <html lang="en-EN" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"

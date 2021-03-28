@@ -56,11 +56,11 @@
 
 .box-container {
     text-align: center;
-    padding: ($base-spacing * 3) $base-spacing;
+    padding: ($base-spacing * 2) $base-spacing;
 }
 
 .box-container .box {
-    width: rem(340px);
+    width: rem(460px);
     position: relative;
     text-align: center;
     background: #202020;
@@ -68,7 +68,7 @@
     @include border-radius(rem(3px));
     @include box-shadow(0px 3px 20px 0px, $shadow);
     padding: $base-spacing ($base-spacing * 2);
-    margin: 0 $base-spacing;
+    margin: 0 $base-spacing rem(60px) $base-spacing;
 }
 
 .projects .box span {
@@ -154,6 +154,19 @@
     vertical-align: middle;
 }
 
+@media only screen and (min-width: 1281px) {
+    .box-container {
+        width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+        padding: ($base-spacing * 2) $base-spacing;
+    }
+
+    .box-container .box {
+        width: rem(540px);
+    }
+}
+
 @media only screen and (min-height: 300px) and (max-height: 740px) {
     .default {
         height: 100%;
@@ -181,9 +194,7 @@
     }
 
     .box-container .box {
-        width: 27%;
         padding: $base-spacing / 2;
-        margin: 0 ($base-spacing / 2);
     }
 
     .collabs {
@@ -196,19 +207,19 @@
     }
 
     .collabs ul li {
-        width: 27%;
+        width: 50%;
         padding: $base-spacing 0;
     }
 
     .collabs ul li img {
         width: 100%;
-        max-width: rem(160px);
+        max-width: rem(200px);
         height: auto;
         margin: 0 auto;
     }
 
     .collabs ul li img.sm {
-        max-width: rem(95px);
+        max-width: rem(180px);
     }
 }
 

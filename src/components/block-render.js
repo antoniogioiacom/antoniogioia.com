@@ -10,6 +10,10 @@ export default () => {
                     <span>javascript</span>
                 </li>
                 <li>
+                    <img src="/images/python.svg" alt="Python logo" />
+                    <span>python</span>
+                </li>
+                <li>
                     <img src="/images/nodejs.svg" alt="NodeJs logo" />
                     <span>nodejs</span>
                 </li>

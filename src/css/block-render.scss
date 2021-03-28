@@ -5,6 +5,8 @@
 .stack-tools ul {
     text-align: center;
     padding: $base-spacing 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .stack-tools ul li {

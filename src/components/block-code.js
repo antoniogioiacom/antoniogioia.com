@@ -16,14 +16,14 @@ export default (props) => {
 /*
     hello world! :)
     mi chiamo Antonio Gioia e sono 
-    uno sviluppatore javascript full stack.
+    uno sviluppatore python & javascript full stack.
     svolgo la mia attività da libero professionista 
     specializzato nello sviluppo di applicazioni web
 */
 
 const antonio_gioia = { 
-    "età"           : 35,
-    "ruolo"         : "full stack javascript developer",
+    "età"           : 36,
+    "ruolo"         : "full stack web developer",
     "livello"       : "senior",
     "esperienza"    : "programmatore da +15 anni",
     "partita-iva"   : "02621900741",
@@ -34,20 +34,20 @@ const antonio_gioia = {
 
             case "skills":
                 return `
-const server = "linux (debian, ubuntu)";
-const web_server = "nodejs, ngnix";
-const database = "mysql, mongodb, postgres";
-const sviluppo_api = "rest, graphql";
+const languages  = "javascript, python, php";
+const server     = "linux (debian, ubuntu)";
+const backend    = "nodejs, django (rest, graphql)";
+const frontend   = "angular, react, jquery";
+const database   = "mysql, mongodb, postgres";
 const web_design = "html, css, photoshop";
-const front_end_javascript = "angular, react, jquery";
-const android = "apache cordova, ionic";
-const cms = "wordpress";
+const android    = "apache cordova, ionic";
+const cloud      = "aws (ec2, s3, lambda)";
+const cms        = "wordpress (visual composer, divi, elementor)";
 const competenze_specifiche = [
     "accessibilità (aria)",
     "responsive design",
     "compatibilità cross-browser",
     "integrazione mappe (google maps, open street map)",
-    "integrazione protocollo saml",
     "search engine optimization",
     "sviluppo web crawlers",
     "sviluppo blockchain scrapers",

@@ -11,7 +11,7 @@ import "../css/index.scss"
 export default () => {
     return (
         <Layout>
-            <Head prefix="Full stack Javascript developer <> " />
+            <Head prefix="Full stack Python / Javascript developer <> " />
             <section
                 className="main"
                 role="main"
@@ -49,75 +49,32 @@ export default () => {
                 <ul className="box-container">
                     <li className="box">
                         <a
-                            href="https://github.com/antoniogioiacom/startapp"
+                            href="https://github.com/antoniogioiacom/pyss"
                             title="Repository Github (link esterno)"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <h3 aria-level="3">startapp</h3>
+                            <h3 aria-level="3">pyss</h3>
                             <picture>
                                 <source
-                                    srcSet="/images/startapp.webp"
+                                    srcSet="/images/pyss.webp"
                                     type="image/webp"
                                 />
                                 <source
-                                    srcSet="/images/startapp.jpg"
-                                    type="image/jpeg"
+                                    srcSet="/images/pyss.png"
+                                    type="image/png"
                                 />
                                 <img
                                     className="projects-img"
-                                    src="/images/startapp.webp"
-                                    alt="Koa.js app boilerplate"
+                                    src="/images/pyss.webp"
+                                    alt="Pyss (python screen shots)"
                                 />
                             </picture>
-                            <span>javascript</span>
+                            <span>python</span>
                             <div className="project-desc">
                                 <div className="project-desc-inner">
                                     <p>
-                                        Starter app boilerplate, basato su
-                                        Koa.js, per creare rapidamente
-                                        prototipi. Include build per assets
-                                        statici{" "}
-                                    </p>
-                                </div>
-                                <div className="project-desc-source">
-                                    <img
-                                        src="/images/github.svg"
-                                        alt="Github logo"
-                                    />
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li className="box">
-                        <a
-                            href="https://github.com/antoniogioiacom/wire"
-                            title="Repository Github (link esterno)"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <h3 aria-level="3">wire</h3>
-                            <picture>
-                                <source
-                                    srcSet="/images/wire.webp"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcSet="/images/wire.jpg"
-                                    type="image/jpeg"
-                                />
-                                <img
-                                    className="projects-img"
-                                    src="/images/wire.webp"
-                                    alt="Linux command line manager per reti wireless"
-                                />
-                            </picture>
-                            <span>shell</span>
-                            <div className="project-desc">
-                                <div className="project-desc-inner">
-                                    <p>
-                                        Linux command line manager per
-                                        interfacce di rete wireless{" "}
+                                    Command line utility to get screenshots of a webpage in different viewports. Supports full page screenshots and custom Javascript on page load and scroll.{" "}
                                     </p>
                                 </div>
                                 <div className="project-desc-source">
@@ -170,12 +127,118 @@ export default () => {
                             </div>
                         </a>
                     </li>
+                    <li className="box">
+                        <a
+                            href="https://github.com/antoniogioiacom/wire"
+                            title="Repository Github (link esterno)"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h3 aria-level="3">wire</h3>
+                            <picture>
+                                <source
+                                    srcSet="/images/wire.webp"
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcSet="/images/wire.jpg"
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    className="projects-img"
+                                    src="/images/wire.webp"
+                                    alt="Linux command line manager per reti wireless"
+                                />
+                            </picture>
+                            <span>shell</span>
+                            <div className="project-desc">
+                                <div className="project-desc-inner">
+                                    <p>
+                                        Linux command line manager per
+                                        interfacce di rete wireless{" "}
+                                    </p>
+                                </div>
+                                <div className="project-desc-source">
+                                    <img
+                                        src="/images/github.svg"
+                                        alt="Github logo"
+                                    />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li className="box">
+                        <a
+                            href="https://github.com/antoniogioiacom/startapp"
+                            title="Repository Github (link esterno)"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <h3 aria-level="3">startapp</h3>
+                            <picture>
+                                <source
+                                    srcSet="/images/startapp.webp"
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcSet="/images/startapp.jpg"
+                                    type="image/jpeg"
+                                />
+                                <img
+                                    className="projects-img"
+                                    src="/images/startapp.webp"
+                                    alt="Koa.js app boilerplate"
+                                />
+                            </picture>
+                            <span>javascript</span>
+                            <div className="project-desc">
+                                <div className="project-desc-inner">
+                                    <p>
+                                        Starter app boilerplate, basato su
+                                        Koa.js, per creare rapidamente
+                                        prototipi. Include build per assets
+                                        statici{" "}
+                                    </p>
+                                </div>
+                                <div className="project-desc-source">
+                                    <img
+                                        src="/images/github.svg"
+                                        alt="Github logo"
+                                    />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
                 <h2 aria-level="2">
                     collaborazioni<span className="square">|</span>
                 </h2>
                 <div className="collabs">
                     <ul>
+                        <li>
+                            <a
+                                href="https://cmcc.it"
+                                title="CMCC (link esterno)"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <picture>
+                                    <source
+                                        srcSet="/images/cmcc.webp"
+                                        type="image/webp"
+                                    />
+                                    <source
+                                        srcSet="/images/cmcc.png"
+                                        type="image/png"
+                                    />
+                                    <img
+                                        className="sm"
+                                        src="/images/cmcc.webp"
+                                        alt="CMCC logo"
+                                    />
+                                </picture>
+                            </a>
+                        </li>
                         <li>
                             <a
                                 href="http://apuliastudentservice.com"
@@ -190,7 +253,7 @@ export default () => {
                                     />
                                     <source
                                         srcSet="/images/apuliastudentservice.png"
-                                        type="image/jpeg"
+                                        type="image/png"
                                     />
                                     <img
                                         className="sm"
@@ -214,7 +277,7 @@ export default () => {
                                     />
                                     <source
                                         srcSet="/images/cercoalloggio.png"
-                                        type="image/jpeg"
+                                        type="image/png"
                                     />
                                     <img
                                         className="sm"
@@ -238,7 +301,7 @@ export default () => {
                                     />
                                     <source
                                         srcSet="/images/spassiaisi.png"
-                                        type="image/jpeg"
+                                        type="image/png"
                                     />
                                     <img
                                         className="sm"

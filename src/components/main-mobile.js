@@ -9,7 +9,7 @@ export default () => {
             <p>
                 mi chiamo <span className="keyword">Antonio Gioia</span> e sono
                 uno sviluppatore{" "}
-                <span className="keyword-alt">javascript full stack</span>{" "}
+                <span className="keyword-alt">python & javascript full stack</span>{" "}
                 specializzato nello sviluppo di applicazioni web
             </p>
             <h2 aria-level="2">

@@ -17,7 +17,7 @@ export default () => {
                     <img src="/images/nodejs.svg" alt="NodeJs logo" />
                     <span>nodejs</span>
                 </li>
-                <li>
+                <li className="stack-hide">
                     <img src="/images/angular.svg" alt="AngularJs logo" />
                     <span>angular</span>
                 </li>

@@ -90,7 +90,7 @@ We can define a SAML strategy with a new instance of `Strategy` from `passport-s
             privateCert: fs.readFileSync("./certs/key.pem", "utf8")
             // more settings might be needed by the Identity Provider
         },
-            function(req, profile, done) {
+            function(profile, done) {
             return done(null, profile);
         }
     );

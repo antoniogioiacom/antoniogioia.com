@@ -154,6 +154,12 @@
     vertical-align: middle;
 }
 
+.collabs ul li img {
+    width: 100%;
+    max-width: rem(215px);
+    height: auto;
+}
+
 @media only screen and (min-width: 1281px) {
     .box-container {
         width: 1280px;

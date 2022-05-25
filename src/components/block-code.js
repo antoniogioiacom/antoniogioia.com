@@ -22,7 +22,7 @@ export default (props) => {
 */
 
 const antonio_gioia = { 
-    "età"           : 36,
+    "età"           : 37,
     "ruolo"         : "full stack web developer",
     "livello"       : "senior",
     "esperienza"    : "programmatore da +15 anni",
@@ -36,22 +36,22 @@ const antonio_gioia = {
                 return `
 const languages  = "javascript, python, php";
 const server     = "linux (debian, ubuntu)";
-const backend    = "nodejs, django (rest, graphql)";
+const backend    = "nodejs, nextjs (rest, graphql)";
 const frontend   = "angular, react, jquery";
 const database   = "mysql, mongodb, postgres";
 const web_design = "html, css, photoshop";
-const android    = "apache cordova, ionic";
+const android    = "apache cordova";
 const cloud      = "aws (ec2, s3, lambda)";
 const cms        = "wordpress (visual composer, divi, elementor)";
 const competenze_specifiche = [
     "accessibilità (aria)",
     "responsive design",
     "compatibilità cross-browser",
-    "integrazione mappe (google maps, open street map)",
+    "integrazione mappe (google maps, osm, leaflet)",
     "search engine optimization",
-    "sviluppo web crawlers",
-    "sviluppo blockchain scrapers",
-    "bash scripting"
+    "web crawlers",
+    "blockchain scrapers",
+    "automazioni servizi google (google apps script)"
 ];
 
 `

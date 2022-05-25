@@ -74,7 +74,11 @@ export default () => {
                             <div className="project-desc">
                                 <div className="project-desc-inner">
                                     <p>
-                                    Command line utility to get screenshots of a webpage in different viewports. Supports full page screenshots and custom Javascript on page load and scroll.{" "}
+                                        Command line utility to get screenshots
+                                        of a webpage in different viewports.
+                                        Supports full page screenshots and
+                                        custom Javascript on page load and
+                                        scroll.{" "}
                                     </p>
                                 </div>
                                 <div className="project-desc-source">
@@ -241,24 +245,24 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="http://apuliastudentservice.com"
-                                title="Apulia Student Service (link esterno)"
+                                href="http://homacoop.it"
+                                title="Homa Coop (link esterno)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <picture>
                                     <source
-                                        srcSet="/images/apuliastudentservice.webp"
+                                        srcSet="/images/homacoop.webp"
                                         type="image/webp"
                                     />
                                     <source
-                                        srcSet="/images/apuliastudentservice.png"
+                                        srcSet="/images/homacoop.png"
                                         type="image/png"
                                     />
                                     <img
                                         className="sm"
-                                        src="/images/apuliastudentservice.webp"
-                                        alt="Apulia Student Service logo"
+                                        src="/images/homacoop.webp"
+                                        alt="Homa Coop logo"
                                     />
                                 </picture>
                             </a>

@@ -10,18 +10,12 @@ export default () => {
             </h2>
             <ul className="contacts-why">
                 <li>progettazione e realizzazione di rich web applications</li>
-                <li>piattaforme web con soluzioni personalizzate</li>
-                <li>creazione e/o aggiornamento di siti web e landing pages</li>
+                <li>automazioni tra servizi cloud (google, amazon aws etc)</li>
                 <li>
-                    siti aziendali con installazione wordpress, temi
-                    personalizzati e configurazione plugin
+                    siti web con installazione wordpress, temi e plugin
+                    personalizzati, licenza divi
                 </li>
-                <li>
-                    programmazione di crawlers con aggregazione e analisi di
-                    dati per strategie di marketing
-                </li>
-                <li>consulenza tecnica servizi informatici</li>
-                <li>consulenza sicurezza informatica e protezione dati</li>
+                <li>consulenza tecnica crypto, blockchain e nft</li>
             </ul>
         </div>
     )

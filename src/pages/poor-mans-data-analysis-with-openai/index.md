@@ -17,13 +17,13 @@ Antonio Gioia, 2023
 
 ---
 
-Ever since [OpenAI](https://openai.com) provided access to their _GPT-4_ API, I've been contemplating how to utilize it for data analysis of my own database. Although I'm not a data scientist, I'm familiar with the tools and techniques used in data science. I understand that I should ideally use something like Python/Pandas for comprehensive analysis of structured and unstructured data. However, today I'm feeling a bit lazy yet creative, and I want to find a solution that involves just some _javascript_ and a bit of _prompt engineering_.
+Ever since [OpenAI](https://openai.com) provided access to their _GPT-4_ API, I've been contemplating on how to utilize it for data analysis of my own databases. Although I'm not a data scientist, I'm familiar with the tools and techniques used in data science. I understand that I should ideally use something like Python/Pandas for comprehensive analysis of structured and unstructured data. However, today I'm feeling a bit lazy yet creative, and I want to find a solution that involves just some _javascript_ and a bit of _prompt engineering_.
 
-At work i manage a document-based database of properties. Each property has data such as city, address, zone, and category (apartment, studio flat, etc.). Some properties may have available rooms, which can either be single or double rooms. Each room has a monthly rent cost and information about the tenants, including the type of tenants renting the house (students, erasmus, etc.). How can I use AI to analyze this data in the database and get answers to questions like:
+At work I manage a document-based database of properties. Each property has data such as city, address, zone, category (apartment, studio flat, etc.) and so on. Some properties may have available rooms, which can either be single or double rooms. Each room has a monthly rent cost and information about the tenants, including the type of tenants renting the house (students, erasmus, etc.). How can I use AI to analyze this data in the database and get answers to questions like:
 
 - Can you provide a list of available rooms in apartments in Rome?
 - What's the cheapest room available for students in Rome?
-- Are there any available rooms in the Stazione Termini zone in Rome?
+- Are there any available rooms around Stazione Termini in Rome?
 
 I repeat, the optimal solution would typically involve using some Python code utilizing Langchain and so forth. However, today **I want to HAVE FUN** and conduct an experiment.
 
@@ -95,7 +95,7 @@ Since the keys of the document are going to be the heading columns in the first 
 ```
 
 **_Ok, but the dataset must be small._**
-Indeed, this works if you manage to restrict the dataset to a maximum of 30-40 rows. It's up to you to understand the user's question and pick bits of information to filter out unnecessary data.
+Indeed, this works if you manage to restrict the dataset to a maximum of 20-30 rows. It's up to you to understand the user's question and pick bits of information to filter out unnecessary data.
 
 **_How do you understand the question and retain that information during the dialogue?_**
 
@@ -161,7 +161,7 @@ function getLastCityMention(messages, cities) {
 
 **_Ok, but how do I instruct the AI to act like some kind of *room finder assistant*?_**
 
-With **_promot engineering_**!
+With **prompt engineering**!
 I've spent an insane amount of time testing and improving my prompts, experimenting with various types of requests and analyzing the responses.
 
 Let's see how to actually send the prompts to OpenAI API, as explained in the [library documentation](https://github.com/vercel/ai):
@@ -251,7 +251,7 @@ Consider this some kind of "shortcut" to analyze your internal data.
 
 ---
 
-Are you interested in applying this method to your data, or would you like to explore different solutions together?
+Are you interested in applying this method to your data or would you like to explore different solutions together?
 Feel free to contact me via email: [info@antoniogioia.com](mailto:info@antoniogioia.com)
 
 ---

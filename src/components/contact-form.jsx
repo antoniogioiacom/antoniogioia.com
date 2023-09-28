@@ -26,7 +26,7 @@ export default (props) => {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => window.location.href(form.getAttribute("action")))
       .catch((error) => alert(error));
   };
 

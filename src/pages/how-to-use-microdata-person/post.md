@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: How to use microdata Person on your portfolio website and improve your SEO
 date: "2013-11-10T17:00:00.284Z"
 description: "How to use microdata Person on your portfolio website and improve your SEO"

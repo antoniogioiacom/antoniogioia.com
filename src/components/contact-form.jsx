@@ -26,7 +26,7 @@ export default (props) => {
         ...state,
       }),
     })
-      .then(() => window.location.href(form.getAttribute("action")))
+      .then(() => alert("Thank you for your submission"))
       .catch((error) => alert(error));
   };
 

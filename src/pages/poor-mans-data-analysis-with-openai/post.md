@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: "Poor man's data analysis with OpenAI"
 date: "2023-09-27T17:10:00.284Z"
 description: "Poor man's data analysis with OpenAI"

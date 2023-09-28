@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: How to configure your VPS with security in mind
 date: "2020-02-10T17:00:00.284Z"
 description: "How to configure your VPS with security in mind"

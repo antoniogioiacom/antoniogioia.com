@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Window from "../components/window.jsx";
+import MainMobile from "../components/main-mobile.jsx";
+import BlogArticles from "../components/blog-articles.jsx";
+import ContactsWhy from "../components/contacts-why.jsx";
+import Footer from "../components/footer.jsx";
+---
+
+<Layout title="Javascript developer a Lecce, antoniogioia.com">
+  <main>
+    <section class="main" role="main" aria-label="Informazioni personali">
+      <Window
+        classes="editor code-editor code-editor-skills mobile-off"
+        content="code"
+        source="skills"
+        client:load
+      />
+      <Window
+        classes="editor code-editor code-editor-stack mobile-off"
+        content="render"
+        client:load
+      />
+      <Window
+        classes="editor code-editor code-editor-about mobile-off"
+        content="code"
+        source="about"
+        client:load
+      />
+      <div class="mobile-on">
+        <MainMobile />
+      </div>
+    </section>
+    <section class="articles" aria-label="Blog">
+      <BlogArticles />
+    </section>
+    <section class="projects" aria-label="Progetti e collaborazioni">
+      <h2 aria-level="2">
+        collaborazioni<span class="square">|</span>
+      </h2>
+      <div class="collabs">
+        <ul>
+          <li>
+            <a
+              href="https://cmcc.it"
+              title="CMCC (link esterno)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <picture>
+                <source srcset="/images/cmcc.webp" type="image/webp" />
+                <source srcset="/images/cmcc.png" type="image/png" />
+                <img class="sm" src="/images/cmcc.webp" alt="CMCC logo" />
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://homacoop.it"
+              title="Homa Coop (link esterno)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <picture>
+                <source srcset="/images/homacoop.webp" type="image/webp" />
+                <source srcset="/images/homacoop.png" type="image/png" />
+                <img
+                  class="sm"
+                  src="/images/homacoop.webp"
+                  alt="Homa Coop logo"
+                />
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.cercoalloggio.com"
+              title="Cercoalloggio.com (link esterno)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <picture>
+                <source srcset="/images/cercoalloggio.webp" type="image/webp" />
+                <source srcset="/images/cercoalloggio.png" type="image/png" />
+                <img
+                  class="sm"
+                  src="/images/cercoalloggio.webp"
+                  alt="Cercoalloggio.com logo"
+                />
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer" aria-label="Contatti">
+      <ContactsWhy />
+      <Footer />
+    </section>
+  </main>
+</Layout>

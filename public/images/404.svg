@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 126 126" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-49.5 -31.862)">
+  <path d="m78.214 42.362h68.571a18.214 18.214 0 0 1 18.214 18.214v68.571a18.214 18.214 0 0 1 -18.214 18.214h-68.571a18.214 18.214 0 0 1 -18.214 -18.214v-68.571a18.214 18.214 0 0 1 18.214 -18.214" stroke="#000"/>
+  <path d="m75 57.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m80 62.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m85 67.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m90 72.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m95 77.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-100 57.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-95 62.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-90 67.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-85 72.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-80 77.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m125 57.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m130 62.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m135 67.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m140 72.362h5v5h-5z" fill="#00ec00"/>
+  <path d="m145 77.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-150 57.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-145 62.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-140 67.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-135 72.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-130 77.362h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-85 127.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-85 122.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-90 117.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-95 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-100 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-105 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-110 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-115 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-120 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-125 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-130 112.36h5v5h-5z" fill="#00ec00"/>
+  <path transform="scale(-1,1)" d="m-135 112.36h5v5h-5z" fill="#00ec00"/>
+  <path d="m140 127.36h5v5h-5z" fill="#00ec00"/>
+  <path d="m140 122.36h5v5h-5z" fill="#00ec00"/>
+  <path d="m135 117.36h5v5h-5z" fill="#00ec00"/>
+  <path d="m130 112.36h5v5h-5z" fill="#00ec00"/>
+ </g>
+</svg>

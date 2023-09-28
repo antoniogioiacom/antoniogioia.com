@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import Header from "../components/header.jsx";
+import { appConfig } from "../config/app";
+import Footer from "../components/footer";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={appConfig.description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Antonio Gioia" />
+    <title>Blog: {title}, Antonio Gioia</title>
+  </head>
+  <body>
+    <Header />
+    <div class="container">
+      <main class="blog" role="main">
+        <div class="blog-post-container">
+          <div class="blog-post">
+            <article class="blog-post-content">
+              <slot />
+            </article>
+          </div>
+        </div>
+      </main>
+      <section class="footer">
+        <Footer />
+      </section>
+    </div>
+  </body>
+</html>

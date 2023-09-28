@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactsWhy from "../components/contacts-why.jsx";
+import Footer from "../components/footer.jsx";
+import ContactForm from "../components/contact-form.jsx";
+---
+
+<Layout
+  title="Javascript & Python full stack developer a Lecce, antoniogioia.com"
+>
+  <main>
+    <section class="footer" aria-label="Contatti">
+      <h2 aria-level="2">
+        domande? proposte? consulenza?<span class="square">|</span>
+      </h2>
+      <ContactForm client:load />
+      <ContactsWhy />
+      <Footer />
+    </section>
+  </main>
+</Layout>

@@ -16,15 +16,13 @@ Antonio Gioia, 2023
 
 ---
 
-Ever since [OpenAI](https://openai.com) provided access to their _GPT-4_ API, I've been contemplating on how to utilize it for data analysis of my own databases. Although I'm not a data scientist, I'm familiar with the tools and techniques used in data science. I understand that I should ideally use something like Python/Pandas for comprehensive analysis of structured and unstructured data. However, today I'm feeling a bit lazy yet creative, and I want to find a solution that involves just some _javascript_ and a bit of _prompt engineering_.
+Ever since [OpenAI](https://openai.com) provided access to their _GPT-4_ API, I've been contemplating on how to utilize it for data analysis of my own databases. Although I'm not a data scientist, I'm familiar with the tools and techniques used in data science. I understand that I should ideally use something like Python/Pandas/Langchain for comprehensive analysis of structured and unstructured data. However, today I'm feeling a bit lazy yet creative, and I want to find a solution that involves just some _javascript_ and a bit of _prompt engineering_.
 
 At work I manage a document-based database of properties. Each property has data such as city, address, zone, category (apartment, studio flat, etc.) and so on. Some properties may have available rooms, which can either be single or double rooms. Each room has a monthly rent cost and information about the tenants, including the type of tenants renting the house (students, erasmus, etc.). How can I use AI to analyze this data in the database and get answers to questions like:
 
 - Can you provide a list of available rooms in apartments in Rome?
 - What's the cheapest room available for students in Rome?
 - Are there any available rooms around Stazione Termini in Rome?
-
-I repeat, the optimal solution would typically involve using some Python code utilizing Langchain and so forth. However, today **I want to HAVE FUN** and conduct an experiment.
 
 What I need:
 
@@ -219,7 +217,7 @@ const response = await openai.chat.completions.create({
 
 And the user will receive the best matching rooms from the textual CSV, streamed directly to their browser!
 
-The same pattern is used in the user's very first question, where we need to identify the city before creating the CSV for the response. Our hook will return that the city is _null_ if no city is found in the messages. In that case, I craft a prompt for OpenAI that asks the user for a city again:
+A different pattern is used in the user's very first question, where we need to identify the city before creating the CSV for the response. Our hook will return that the city is _null_ if no city is found in the messages. In that case, I craft a prompt for OpenAI that asks the user for a city again:
 
 ```javascript
 // the list of allowed cities comes from my database
@@ -238,11 +236,13 @@ As you can see in this prompt, I'm not adding any other message to the array. Es
 
 ## Is this a viable solution in production?
 
-In a production environment? Probably not, as it could become expensive if you have a large number of users. I would recommend using this solution for internal tools or for a feature used by a small group of people.
+In a production environment? Probably not, as it could become expensive if you have a large number of users. I would recommend using this solution for internal tools or for a feature used by a small group of people. However, as I mentioned earlier, this is just a fun example, and the proper way to achieve this would be through more analytical methods. Typically, users can already find the best match for a room using the UI of a web app. The use case discussed in the article merely adds a way to find something through _conversational search_. Be creative! For instance, I create a human-readable ad from the data found in the matching row of the CSV and ask it to be translated into a couple of languages on the fly.
 
-The possibilities are endless. However, as I mentioned earlier, this is just a fun example, and the proper way to achieve this would be through more analytical methods.
+Here's a screenshot of a _proof of concept_ that I've built, It's programmed to respond in Italian and the output adheres to a template that I defined in the prompt:
 
-Consider this some kind of "shortcut" to analyze your internal data.
+![AI tool Proof of concept](https://antoniogioia.com/images/blog/ai-poc.jpg)
+
+Consider this a kind of "shortcut" for creatively querying your internal data.
 
 - You can experiment with prompts and find ways to create fixed boundaries (for instance, if you are building a property assistant, it should not start discussing philosophy)
 - You should restrict the data set as much as possible to save tokens! Look at my example on how I manage to understand the city where the user is interested in finding rooms. You can create more filters built into the dialogue, and with the proper parameters, you can filter a database of a few million rows into a couple dozen results. At that point, it's easy for GPT-4 to understand it

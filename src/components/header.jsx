@@ -3,12 +3,12 @@ import { appConfig } from "../config/app";
 export default () => {
   return (
     <header>
-      <h1 aria-level="1">
+      <div className="logo" aria-label="Logo">
         <span className="square">&#9632;</span>
         <a href="/" title={appConfig.title}>
           {appConfig.domain}
         </a>
-      </h1>
+      </div>
       <div className="toolbar" aria-label="Contatti">
         <a
           className="header-button"

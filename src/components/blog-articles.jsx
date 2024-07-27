@@ -8,6 +8,15 @@ export default () => {
         <li>
           <a
             className="external"
+            href="/how-to-setup-a-mongodb-replica-set-with-coolify"
+            title="How to setup a MongoDB Replica Set with Coolify"
+          >
+            How to setup a MongoDB Replica Set with Coolify
+          </a>
+        </li>
+        <li>
+          <a
+            className="external"
             href="/poor-mans-data-analysis-with-openai"
             title="Poor man's data analysis with OpenAI"
           >

@@ -37,12 +37,12 @@ const backend    = "nodejs, python";
 const frontend   = "react / nextjs, astro, angular";
 const database   = "mongodb, mysql, postgres";
 const web_design = "html, css, photoshop";
-const cloud      = "aws (ec2, s3, lambda)";
+const cloud      = "aws (ec2, s3, lambda), coolify";
 const cms        = "wordpress (visual composer, divi, elementor)";
 const competenze_specifiche = [
     "accessibilità (aria)",
     "responsive design",
-    "integrazione mappe (google maps, osm, leaflet)",
+    "integrazione mappe (google maps, openstreetmap, leaflet)",
     "search engine optimization",
     "web crawlers",
     "SAML 2.0",

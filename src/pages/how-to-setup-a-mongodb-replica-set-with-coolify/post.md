@@ -1,5 +1,5 @@
 ---
-title: "How to setup a MongoDB replica set with Coolify"
+title: "How to setup a MongoDB Replica Set with Coolify"
 date: "2024-07-27T11:30:00.284Z"
 description: "How to setup a MongoDB replica set with Coolify"
 filepath: "/how-to-setup-a-mongodb-replica-set-with-coolify"

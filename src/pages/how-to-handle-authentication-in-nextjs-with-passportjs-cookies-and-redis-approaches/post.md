@@ -491,7 +491,7 @@ router.use(expressWrapper(authMiddleware)).get(async (req, res) => {
     // Handle errors and send appropriate response
     res.status(404).json({
       success: false,
-      error: error.message || "USER_NOT_FOUND",
+      error: error.message || "User not found",
       user: null,
     });
   }
@@ -504,6 +504,73 @@ export default router.handler({
   },
 });
 ```
+
+In this NextJS API endpoint, we're using the [next-connect](https://www.npmjs.com/package/next-connect) library, which provides a promise-based method for routing and middleware management. This library is particularly useful because:
+
+1. It integrates smoothly with Passport.js and other middleware written in the Express.js style.
+2. It allows for easy chaining of different middleware based on the API's requirements.
+
+The `createRouter()` function sets up our router, and we use `expressWrapper(authMiddleware)` to protect this route with our custom authentication middleware.
+
+While this approach uses `next-connect`, you don't have to.
+You can rewrite the auth middleware as an higher-order function and wrap your original API route handler with authentication logic.
+
+Here's an example:
+
+```javascript
+export function withAuth(handler) {
+  return async (req, res) => {
+    let session;
+    try {
+      // Attempt to get the session from the request
+      session = await getSession(req);
+
+      // Check if the session exists and contains necessary data
+      if (!session || !session.userId || !session.email) {
+        throw new Error("Invalid session");
+      }
+
+      // Validate the session data using a schema
+      const validate = schema.safeParse({
+        email: session.email,
+        userId: session.userId,
+      });
+
+      if (!validate.success) {
+        throw new Error("Invalid session");
+      }
+
+      // If everything is valid, attach the session to the request object
+      req.session = session;
+
+      // Call the handler function
+      return await handler(req, res);
+    } catch (error) {
+      // Handle error
+    }
+  };
+}
+```
+
+And you can use it on an API route like this:
+
+```javascript
+import { withAuth } from "@/middleware/auth";
+
+async function handler(req, res) {
+  // Your protected API logic here
+  const { userId, email } = req.session;
+
+  // Example fetch user data
+  const user = await getUserFromDatabase(userId, email);
+
+  res.status(200).json({ success: true, user });
+}
+
+export default withAuth(handler);
+```
+
+Regardless of the method you choose, the underlying concept remains the same: protect your API routes, validate the session, and return the appropriate response based on the authentication status.
 
 ## 7. Client-Side Authentication
 
@@ -652,34 +719,37 @@ passport.use("local", localStrategy);
 router.post(async (req, res) => {
   try {
     const user = await new Promise((resolve, reject) => {
-      passport.authenticate("local", { session: false }, (error, token) => {
+      passport.authenticate("local", { session: false }, (error, user) => {
         if (error) {
           reject(error);
+        } else if (!user) {
+          reject(new Error("Invalid credentials"));
         } else {
-          resolve(token);
+          resolve(user);
         }
       })(req, res);
     });
 
-    if (user) {
-      const session = {
-        ...user,
-        // Here you can add any useful data about the user session
-        csrfToken: randomBytes(32).toString("hex"),
-        refreshToken: randomBytes(32).toString("hex"),
-      };
+    const session = {
+      ...user,
+      // Here you can add any useful data about the user session
+      csrfToken: randomBytes(32).toString("hex"),
+      refreshToken: randomBytes(32).toString("hex"),
+    };
 
-      await setSession(res, session);
+    await setSession(res, session);
 
-      res.status(200).json({
-        success: true,
-        user: user,
-      });
-    } else {
-      throw new Error("User not found");
-    }
+    res.status(200).json({
+      success: true,
+      user: {
+        id: user.id,
+        email: user.email,
+        // Add any other non-sensitive user data you want to return
+      },
+    });
   } catch (error) {
-    res.status(401).send(error.message);
+    console.error("Login error:", error);
+    res.status(401).json({ success: false, error: error.message });
   }
 });
 
@@ -693,29 +763,15 @@ export default router.handler({
 
 ## 10. Conclusion
 
-This article has covered the implementation of a robust authentication system in a Next.js application using Passport.js with the local strategy. We've explored two approaches for session management:
+Authentication is crucial for application security. Stay informed about security practices and regularly audit your system.
 
-1. Using cookies for simpler applications
-2. Using Redis for more scalable, distributed applications
+As you build an authentication system for production, keep these critical points in mind:
 
-Both approaches have their merits:
-
-- Cookie-based sessions are simpler to implement and work well for smaller applications.
-- Redis-based sessions offer better scalability, more control over session management, and work well in distributed environments.
-
-Key points to remember:
-
-- Always use HTTPS in production to secure cookies and data in transit.
-- Implement CSRF protection for forms to enhance security.
-- Sanitize and validate all user inputs to prevent injection attacks.
-- Consider implementing rate limiting on authentication endpoints to prevent brute-force attacks.
-- For the Redis approach, implement proper error handling and logging, especially for the refresh token mechanism.
-- Keep your dependencies up-to-date, especially security-critical libraries like Passport.js.
-- Consider the trade-offs between different authentication approaches based on your specific project requirements.
-
-Remember, authentication is a critical part of your application's security. Always stay updated with the latest security best practices and regularly audit your authentication system.
-
-By following the steps and best practices outlined in this article, you should now have a solid foundation for implementing authentication in your Next.js applications. As your application grows, you may need to adapt and expand upon these concepts to meet your specific security and scalability needs.
+- Use HTTPS in production to secure data in transit.
+- Implement CSRF protection and input sanitization.
+- Implement rate limiting for endpoints.
+- Keep dependencies updated.
+- Choose between cookie-based and Redis-based sessions based on your scalability needs.
 
 ---
 

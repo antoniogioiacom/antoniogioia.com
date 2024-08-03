@@ -176,3 +176,7 @@ You have now successfully set up a basic configuration of a MongoDB replica set 
 ## Notes
 
 Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article, contact me at [info@antoniogioia.com](mailto:info@antoniogioia.com).
+
+---
+
+Cover image generated with [DALL·E](https://openai.com)

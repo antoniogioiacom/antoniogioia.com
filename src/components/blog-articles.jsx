@@ -8,6 +8,16 @@ export default () => {
         <li>
           <a
             className="external"
+            href="/how-to-handle-authentication-in-nextjs-with-passportjs-cookies-and-redis-approaches"
+            title="How to handle Authentication in Next.js with Passport.js: Cookies and Redis Approaches"
+          >
+            How to handle Authentication in Next.js with Passport.js: Cookies
+            and Redis Approaches
+          </a>
+        </li>
+        <li>
+          <a
+            className="external"
             href="/how-to-setup-a-mongodb-replica-set-with-coolify"
             title="How to setup a MongoDB Replica Set with Coolify"
           >

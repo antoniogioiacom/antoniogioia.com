@@ -6,7 +6,7 @@ filepath: "/how-to-use-microdata-person"
 cover: "/images/blog/cover-seo.jpg"
 ---
 
-# How to use microdata Person on your portfolio website and improve your SEO
+# How to Use Microdata Person on Your Portfolio Website and Improve Your SEO
 
 Antonio Gioia, 2013
 
@@ -16,23 +16,23 @@ Antonio Gioia, 2013
 
 ---
 
-## Introduction to microdata
+## Introduction to Microdata
 
-[Microdata specification](https://html.spec.whatwg.org/multipage/microdata.html#microdata), one of the new **html5** features, allows content producers to describe a specific type of information. the structured data can be read and used by search engines to give more specific results, for example google will use this data to enrich the results of a query with a **rich snippet**, [a fast introduction to microdata in this video](https://www.youtube.com/watch?v=A-kX0Aut-18) and an example below:
+The [Microdata specification](https://html.spec.whatwg.org/multipage/microdata.html#microdata), one of the new **HTML5** features, allows content producers to describe specific types of information. This structured data can be read and used by search engines to provide more specific results. For example, Google will use this data to enrich the results of a query with a **rich snippet**. You can find a quick introduction to microdata in [this video](https://www.youtube.com/watch?v=A-kX0Aut-18). Here's an example of a rich snippet:
 
 ![Image of Google rich snippets](https://antoniogioia.com/images/blog/google-rich-snippets.png)
 
 A more detailed search result gives users a better idea of your content and improves your **search engine optimization**.
 
-Microdata **items** and **properties** are defined in a public vocabulary, a structured data markup schema supported by major search engines. In the following example we will use the [schema.org](https://schema.org) markup, we can refer the vocabulary to decide which property of the item **Person** we want to use. There are items for different purposes like Events, Products, Places, Movie etc. Remember that search engines will not use content that is not visible to users, as a matter of fact Google declares: “you should mark up the text that actually appears to your users when they visit your web pages”.
+Microdata **items** and **properties** are defined in a public vocabulary, a structured data markup schema supported by major search engines. In the following example, we will use the [schema.org](https://schema.org) markup. We can refer to the vocabulary to decide which properties of the item **Person** we want to use. There are items for different purposes like Events, Products, Places, Movies, etc. Remember that search engines will not use content that is not visible to users. In fact, Google states: "You should mark up the text that actually appears to your users when they visit your web pages."
 
-## How to use microdata
+## How to Use Microdata
 
-Microdata markup are **attributes** in html tags, a container for an item is set by the attribute `itemscope`. Let’s assume we have relevant personal information in the `footer`, microdata Person item in html markup would be:
+Microdata markups are **attributes** in HTML tags. A container for an item is set by the attribute `itemscope`. Let's assume we have relevant personal information in the `footer`. The microdata Person item in HTML markup would be:
 
     <footer itemscope itemtype="http://schema.org/Person"></footer>
 
-In the footer we have our basic information in a paragraph and a personal picture:
+In the footer, we have our basic information in a paragraph and a personal picture:
 
     <p>
     Antonio Gioia <br>
@@ -45,7 +45,7 @@ In the footer we have our basic information in a paragraph and a personal pictur
     <img src="img/antonio-gioia.jpg" alt="Antonio Gioia">
     </p>
 
-In a small snippet of code we can collect few properties: `name`, `jobTitle`, `PostalAddress` and its **nested** subproperties `addressLocality` and `addressCountry`, `url`, `email` and `image`. In this example we will use the tag span to label the item properties, in case of link and images we can use the attribute in the html tag.
+In this small snippet of code, we can collect several properties: `name`, `jobTitle`, `PostalAddress` and its **nested** subproperties `addressLocality` and `addressCountry`, `url`, `email`, and `image`. In this example, we will use the `span` tag to label the item properties. For links and images, we can use the attribute in the HTML tag.
 
     <footer itemscope itemtype="http://schema.org/Person">
         <p>
@@ -63,30 +63,30 @@ In a small snippet of code we can collect few properties: `name`, `jobTitle`, `P
         </p>
     </footer>
 
-## Test your structured data
+## Test Your Structured Data
 
-You can test microdata markup with the [google structured data testing tool](https://search.google.com/structured-data/testing-tool).
+You can test microdata markup with the [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool).
 
 ![Image of Google structured data testing tool](https://antoniogioia.com/images/blog/google-scructured-data-testing-tool.png)
 
-You can test a url or a piece of html, if we paste the example code from above into **code snippet** form returns a result page with the extracted structured data:
+You can test a URL or a piece of HTML. If we paste the example code from above into the **code snippet** form, it returns a result page with the extracted structured data:
 
 ![Image of Google structured data testing tool results](https://antoniogioia.com/images/blog/structured-data-test-results.png)
 
-And Person item in details:
+And here's the Person item in detail:
 
 ![Image of Google structured data testing tool results person](https://antoniogioia.com/images/blog/structured-data-test-person.png)
 
-## Links to know more about microdata
+## Links to Learn More About Microdata
 
-- [Html5 microdata specification](https://html.spec.whatwg.org/multipage/microdata.html#microdata)
-- [Schema.org industry-supported microdata markup](https://schema.org)
-- [Microdata generator tool based on schema.org](http://www.microdatagenerator.com/)
-- [Google structured data testing tool](https://search.google.com/structured-data/testing-tool)
-- [Introduction to rich snippets video](https://www.youtube.com/watch?v=A-kX0Aut-18)
+- [HTML5 Microdata Specification](https://html.spec.whatwg.org/multipage/microdata.html#microdata)
+- [Schema.org: Industry-Supported Microdata Markup](https://schema.org)
+- [Microdata Generator Tool Based on Schema.org](http://www.microdatagenerator.com/)
+- [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
+- [Introduction to Rich Snippets Video](https://www.youtube.com/watch?v=A-kX0Aut-18)
 
 ---
 
 ## Notes
 
-Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article contact me at [info@antoniogioia.com](info@antoniogioia.com).
+Feel free to save or share this article. If you notice a mistake or want to contribute to a revision of the article, please contact me at [info@antoniogioia.com](info@antoniogioia.com).

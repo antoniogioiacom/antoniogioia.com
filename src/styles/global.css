@@ -539,6 +539,15 @@ pre[class*="language-javascript"].line-numbers > code {
 .articles a:hover:before {
   color: #7ec699;
 }
+
+.articles a.blog-all {
+  margin-top: 3rem;
+}
+
+.articles a.blog-all:before {
+  content: "\2192";
+}
+
 @media only screen and (min-width: 661px) and (max-width: 1280px) {
   .articles ul {
     margin: 0 1.875rem;
@@ -916,6 +925,9 @@ code {
   text-align: center;
   border-top: 0.25rem solid #124813;
   border-bottom: 0.25rem solid #124813;
+}
+.blog-page {
+  padding: 3.75rem 0;
 }
 .articles {
   background: #181818;

@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogArticles from "../components/blog-articles.jsx";
+import Footer from "../components/footer.jsx";
+---
+
+<Layout
+  title="Javascript, NextJs, Linux, web development Blog, antoniogioia.com"
+>
+  <main>
+    <section class="articles blog-page" aria-label="Blog">
+      <BlogArticles scope="blog" />
+    </section>
+    <section class="footer" aria-label="Contatti">
+      <Footer />
+    </section>
+  </main>
+</Layout>

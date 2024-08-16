@@ -3,7 +3,7 @@ title: "How to handle Authentication in Next.js with Passport.js: Cookies and Re
 date: "2024-08-03T18:30:00.284Z"
 description: "How to handle Authentication in Next.js with Passport.js: Cookies and Redis Approaches"
 filepath: "/how-to-handle-authentication-in-nextjs-with-passportjs-cookies-and-redis-approaches"
-cover: "/images/blog/cover-auth.png"
+cover: "/images/blog/cover-auth.jpg"
 ---
 
 # How to handle Authentication in Next.js with Passport.js: Cookies and Redis Approaches
@@ -12,7 +12,7 @@ Antonio Gioia, 2024
 
 ---
 
-![Cover](https://antoniogioia.com/images/blog/cover-auth.png)
+![Cover](https://antoniogioia.com/images/blog/cover-auth.jpg)
 
 ---
 

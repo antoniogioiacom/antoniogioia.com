@@ -3,7 +3,7 @@ title: "How to setup a MongoDB Replica Set with Coolify"
 date: "2024-07-27T11:30:00.284Z"
 description: "How to setup a MongoDB replica set with Coolify"
 filepath: "/how-to-setup-a-mongodb-replica-set-with-coolify"
-cover: "/images/blog/cover-replica-set.png"
+cover: "/images/blog/cover-replica-set.jpg"
 ---
 
 # How to Setup a MongoDB Replica Set with Coolify
@@ -12,7 +12,7 @@ Antonio Gioia, 2024
 
 ---
 
-![Cover](https://antoniogioia.com/images/blog/cover-replica-set.png)
+![Cover](https://antoniogioia.com/images/blog/cover-replica-set.jpg)
 
 ---
 

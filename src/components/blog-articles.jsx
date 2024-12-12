@@ -1,6 +1,10 @@
 export default ({ scope }) => {
   const articles = [
     {
+      title: "Protomaps: open source single file maps",
+      url: "/protomaps-open-source-single-file-maps",
+    },
+    {
       title:
         "How to handle Authentication in Next.js with Passport.js: Cookies and Redis Approaches",
       url: "/how-to-handle-authentication-in-nextjs-with-passportjs-cookies-and-redis-approaches",

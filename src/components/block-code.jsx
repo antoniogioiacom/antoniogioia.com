@@ -34,15 +34,15 @@ const antonio_gioia = {
 const languages  = "javascript, python, php";
 const server     = "linux (debian, ubuntu server)";
 const backend    = "nodejs, python";
-const frontend   = "react / nextjs, astro, angular";
+const frontend   = "react / nextjs, astro";
 const database   = "mongodb, mysql, postgres";
 const web_design = "html, css, photoshop";
-const cloud      = "aws (ec2, s3, lambda), coolify";
+const cloud      = "aws, cloudflare, google cloud";
 const cms        = "wordpress (visual composer, divi, elementor)";
 const competenze_specifiche = [
     "accessibilità (aria)",
     "responsive design",
-    "integrazione mappe (google maps, openstreetmap, leaflet)",
+    "integrazione mappe (maplibre-gl, leaflet)",
     "search engine optimization",
     "web crawlers",
     "SAML 2.0",

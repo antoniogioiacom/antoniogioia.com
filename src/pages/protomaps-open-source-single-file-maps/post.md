@@ -72,18 +72,18 @@ When using these coordinates with the `pmtiles extract` command, we list them in
 ./pmtiles extract https://build.protomaps.com/20240917.pmtiles puglia.pmtiles --bbox=14.952521,39.718345,18.632941,42.121209 --maxzoom=14
 ```
 
-This command will create a `puglia.pmtiles` file containing the map tiles and all sorts of layers (street names, buildings, pois, landmarks [and more](https://docs.protomaps.com/basemaps/layers)) with the (optional) `maxzoom` set to 14. The maxzoom parameter can help to reduce file size especially if in your app you don't need deep level of zoom (each level of zoom doubles the number of tiles of the previous level).
+This command will create a `puglia.pmtiles` file containing the map tiles and all sorts of layers (street names, buildings, pois, landmarks [and more](https://docs.protomaps.com/basemaps/layers)) with the (optional) `maxzoom` set to 14. The `maxzoom` parameter can help reduce file size, especially if your app doesn't need deep zoom levels (each zoom level doubles the number of tiles from the previous level).
 
-The `puglia.pmtiles` map file is just about 200MB in size and we can now upload it to a storage accessible by our apps. Such a small size is convenient if we want to store it on [Github Pages](https://pages.github.com) or even on our ([properly configured](https://docs.protomaps.com/pmtiles/cloud-storage#http-servers)) webserver.
+The resulting `puglia.pmtiles` map file is only about 200MB in size, making it easy to upload to storage that's accessible by our apps. This relatively small size makes it convenient to host on [GitHub Pages](https://pages.github.com) or even on our own ([properly configured](https://docs.protomaps.com/pmtiles/cloud-storage#http-servers)) web server.
 
 ## Upload map file to cloud storage
 
-A much better option is cloud storage because it enables scaling, better performance, CDN and more. We can upload our maps to services like Aws S3 or Cloudflare R2 with the command-line tool `go-pmtiles` but first we need some extra configuration. In front of the buckets containing the map(s) files we setup a Lambda or a Worker function and we configure it to handle file on bucket. The documentation website has guides for AWS, Cloudflare, Google Cloud and other cloud providers.
+Cloud storage is a more robust option as it provides scaling capabilities, better performance, CDN integration, and other advantages. While we can upload our maps to services like AWS S3 or Cloudflare R2 using the `go-pmtiles` command-line tool, some initial configuration is required. We need to set up a Lambda or Worker function in front of the buckets containing the map files to handle file requests properly. The documentation website provides comprehensive guides for AWS, Cloudflare, Google Cloud, and other cloud providers.
 
 - [AWS with CloudFormation guide](https://docs.protomaps.com/deploy/aws)
 - [Cloudflare R2 with Worker](https://docs.protomaps.com/deploy/cloudflare)
 
-Once the setup is done you can use the cloud provider UI to upload the maps files on the bucket. The upload form have size limitations and if your file is very large you can use `go-pmtiles`.
+Once the setup is done, you can use the cloud provider's UI to upload the map files to your bucket. However, since upload forms typically have size limitations, you may need to use `go-pmtiles` for larger files.
 
 On the Protomaps Docs website there's a page dedicated to the CLI tool and its various options, in the [upload](https://docs.protomaps.com/pmtiles/cli#upload) section you can find more info on how to set values according to the cloud provider. Here's an example on how to use `go-pmtiles` to upload the `puglia.pmtiles` file on Cloudflare (you will need to create an API key and secret on the service dashboard and `export` them on your terminal session).
 
@@ -93,7 +93,7 @@ On the Protomaps Docs website there's a page dedicated to the CLI tool and its v
 
 ## Use the maps on front-end
 
-We finally have our map files somewhere reachable via internet and we can use it to display a map on our website or apps. The most common javascript libraries are supported:
+We finally have our map files accessible via the internet and can use them to display maps on our websites or apps. The most common JavaScript libraries are supported:
 
 - [LeafletJs](https://leafletjs.com)
 - [Maplibre-GL](https://maplibre.org/maplibre-gl-js/docs)

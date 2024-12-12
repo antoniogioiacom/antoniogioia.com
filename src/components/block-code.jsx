@@ -19,12 +19,12 @@ export default (props) => {
 */
 
 const antonio_gioia = { 
-    "età"           : 39,
     "ruolo"         : "full stack web developer",
     "livello"       : "senior",
     "esperienza"    : "programmatore da +15 anni",
     "partita-iva"   : "02621900741",
     "residenza"     : "lecce, italia"
+    "gatti"         : "2"
 };
 
 `;

@@ -1,6 +1,10 @@
 export default ({ scope }) => {
   const articles = [
     {
+      title: "Accesibilità digitale: audit gratuito e consulenza",
+      url: "/accessibilita-digitale-consulenza",
+    },
+    {
       title: "Protomaps: open source single file maps",
       url: "/protomaps-open-source-single-file-maps",
     },

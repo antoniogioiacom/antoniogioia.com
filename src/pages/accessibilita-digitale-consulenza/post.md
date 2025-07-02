@@ -12,7 +12,7 @@ Antonio Gioia, 2025
 
 ---
 
-![Cover](https://antoniogioia.com/images/blog/cover-a11y.jpg)
+![Cover](https://antoniogioia.com/images/blog/cover-a11y.png)
 
 ---
 
